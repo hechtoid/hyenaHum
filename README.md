@@ -1,16 +1,16 @@
 # hyena/Hum
 ### a webapp to modulate and loop your background noise       
 ## MVPs
-1) intuitive ui - simple controls, simple visualization 
-2) control and stream sound       
+- [ ] intuitive ui - simple controls, simple visualization 
+- [ ] control and stream sound       
     a. PreSet White, Pink, and Brown Noises      
     b. Loaded with appropriate Seed Sounds
-3) select and combine multiple sounds 
-4) scripturally modulate volume, then other effects. first combined, then individually 
-5) Customize Sounds      
+- [ ] select and combine multiple sounds 
+- [ ] scripturally modulate volume, then other effects. first combined, then individually 
+- [ ] Customize Sounds      
     a. upload and utilize user sounds        
     b. Live Generate Custom Noises
-6) Advanced Vizh
+- [ ] Advanced Vizh
 
 
 ## Description        
@@ -27,7 +27,29 @@ Upload, Configure and Create will be rendered through a modal, although many con
 ## Arch & Tech
 
 * Thanks to modern web technologies, I can provide most of this functionality through customization of the `<audio>` element. 
-* I will also use `WebAudioAPI` for advanced manipulations.        
-* I am still thinking in React but will learn VanillaJS.DOM calls 
+* I am still thinking in React but will learn VanillaJS.DOM calls to update the ui.
+    * augmented with CSS styling to increase intuitiveness. 
+* I will also use `WebAudioAPI` for Noise Generation, and advanced manipulation.        
 
 This project will begin with no server, although I may end up throwing up a simple MERN BackEnd. WebPack will bundle the necessary local scripts, one to house the audio control logic and one concerned with the rendering. 
+
+## TIMELINE
+
+### Day 0 
+Proposal Draft and Proposal
+### Day 1
+1) Load and Play Sounds
+    * Seed Loops
+2) Resarch and import `WebAudioAPI`
+    * Define PreLoaded Noises    
+3) Basic index page structure, HTML & JS
+### Day 2
+1) Create and Configure ui elements
+2) Style and Guide
+3) Simple Vizh
+### Day 3
+1) Load other Sounds
+2) Allow User UpLoad of other Sounds
+### Day 4
+1) Advanced Vizh
+2) Allow User Customization of Noise
