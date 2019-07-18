@@ -11,12 +11,11 @@
 
     <audio 
     controls
-    loop
     id="one-audio"
     preload="metadata" 
     onloadedmetadata="oneMaxDurSet()" 
     ontimeupdate="oneDurSet()"
-    <!-- onended="oneDurReSet()" -->
+    onended="oneReSet()"
     >
     <source src='./assets/sounds/Hyena Long.flac' type="audio/flac">
     </audio>        
