@@ -1,5 +1,6 @@
 body{
     background: black;
+    font-family: sans-serif;
 }
 .sound{
     border-radius: 5px;
@@ -8,22 +9,24 @@ body{
     height: 10vh;
     margin: 25px auto;
     background: beige;
+    display: flex;
 }
 .controls{
     border-radius: 5px;
     border: 2px solid black;
     height: 96%;
     width: 10%;
+    display: block;
 }
 .play{
     /* margin-bottom: 10px; */
     color: black;
     font-size: 36px;
-    margin-left: 23px;
+    margin-left: 20px;
 }
 .stop{
     font-size: 42px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .control{
     width: 23px;
@@ -32,5 +35,26 @@ body{
     cursor: pointer;
     transform: scale(1.2)
 }
-
-
+.sliders{
+    display: block;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 10px;
+    font-size: 11px;
+}
+.slider:hover{
+    cursor: pointer;
+}
+.slider{
+    margin: 5px;
+    position: relative;
+    top: 10px;
+}
+.seek{
+    width: 80%;
+    /* display: flex; */
+}
+.sound-selector{
+    margin-left: 123px;
+    width: 123px;
+}
