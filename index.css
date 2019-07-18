@@ -1,0 +1,36 @@
+body{
+    background: black;
+}
+.sound{
+    border-radius: 5px;
+    border: 2px solid lime;
+    width: 80vw;
+    height: 10vh;
+    margin: 25px auto;
+    background: beige;
+}
+.controls{
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 96%;
+    width: 10%;
+}
+.play{
+    /* margin-bottom: 10px; */
+    color: black;
+    font-size: 36px;
+    margin-left: 23px;
+}
+.stop{
+    font-size: 42px;
+    margin-left: 15px;
+}
+.control{
+    width: 23px;
+}
+.control:hover{
+    cursor: pointer;
+    transform: scale(1.2)
+}
+
+
