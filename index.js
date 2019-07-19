@@ -55,11 +55,17 @@ function oneVolumeSet(){
     oneAudio.volume = oneVol.value;
 }
 
-// setInterval(function () { console.log(oneAudio.volume)}, 1000)
+setInterval(function () { console.log(oneAudio.src)}, 1000)
 // setInterval(function(){console.log(oneSelector.value)}, 1000)
 
-function oneSelect(){oneAudio.src = oneSelector.value; onePlay();}
-
+function oneSelect(){
+    if (oneSelector.value === "none"){
+        alertUpload();   
+    } else{
+        oneAudio.src = oneSelector.value; 
+        onePlay();
+    }
+}
 function alertUpload() { 
     alert("Coming Soon!!"); 
     oneAudio.pause();

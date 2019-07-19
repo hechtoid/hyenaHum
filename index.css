@@ -4,13 +4,13 @@ body{
 }
 .sound{
     border-radius: 10px;
-    border: 3px solid white;
+    border: 5px solid white;
     width: 80vw;
     height: 100px;
     margin: 25px auto;
-    opacity: 0.5;
+    opacity: 0.3;
     background: #702020;
-    transition: 0.2s;
+    transition: 0.5s;
     display: flex;
     flex-wrap: wrap;
 }
@@ -19,13 +19,12 @@ body{
     /* transform: scale(1.01); */
     /* border: 1px solid white; */
     opacity: 0.7;
-
 }
 .playing{
-    opacity: 0.9;
+    opacity: 0.7;
     background: #207020;
     transition: 0.1s;
-    border: 3px solid black;
+    border: 5px solid black;
 
 }
 .playing:hover{
@@ -39,12 +38,13 @@ body{
     height: 100%;
     width: 10%;
     min-width: 50px;
+    color: white;
     z-index: 100;
 }
 .controls:hover{
+    color: black;
     cursor: pointer;
-    transform: scale(1.2);
-    color: white;
+    transform: scale(1.1);
     transition: 0.2s;
 }
 .control{
@@ -60,7 +60,7 @@ body{
 .control:hover{
     cursor: pointer;
     /* transform: scale(1.2); */
-    color: white;
+    /* color: white; */
     transition: 0.2s;
 }
 .play{
@@ -89,6 +89,7 @@ body{
     width: 80%;
     padding: 10px;
     font-size: 18px;
+    font-weight: 700;
     height: 5px;
     margin-left: 25px;
 }
@@ -97,14 +98,16 @@ body{
 }
 .slider{
     margin: 5px;
+    padding-left: 50px;
     position: relative;
     top: 9px;
-    width: 70%;
+    width: 60%;
     margin-left: 15px;
 }
 label.volume{
     position: relative;
     top: -15px;
+    color: white;
 }
 .seek{
     width: 80%;
