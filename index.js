@@ -29,7 +29,7 @@ function onePlay(){
     // }
 }
 function oneToggle(){
-    if (oneAudio.paused){
+    if (oneAudio.paused && !oneAudio.src.includes('none')){
         oneAudio.play();
         oneDiv.classList.add("playing");
         onePlayButton.classList.add("inactive");
