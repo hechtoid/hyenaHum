@@ -99,3 +99,4 @@ soundSelect(){
 }
 
 const oneSound = new Sound('one')
+const twoSound = new Sound('two')
