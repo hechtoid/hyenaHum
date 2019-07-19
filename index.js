@@ -18,15 +18,15 @@ oneAudio.muted = true
 
 function onePlay(){
     oneAudio.play();
-    if (oneAudio.src.includes('none')){
-        oneDiv.classList.remove("playing")
-        onePauseButton.classList.add("inactive");
-        onePlayButton.classList.remove("inactive");
-    } else { 
+    // if (oneAudio.src.includes('none')){
+    //     oneDiv.classList.remove("playing")
+    //     onePauseButton.classList.add("inactive");
+    //     onePlayButton.classList.remove("inactive");
+    // } else { 
         oneDiv.classList.add("playing")
         onePlayButton.classList.add("inactive");
         onePauseButton.classList.remove("inactive");
-    }
+    // }
 }
 function oneToggle(){
     if (oneAudio.paused){
@@ -50,17 +50,20 @@ function onePause() {
 //     oneAudio.paused
 // }
 
-function oneVolumeSet(){oneAudio.volume = oneVol.value;}
+function oneVolumeSet(){
+    oneAudio.muted = false;
+    oneAudio.volume = oneVol.value;
+}
 
-setInterval(function(){console.log(oneAudio.paused)}, 1000)
+// setInterval(function () { console.log(oneAudio.volume)}, 1000)
 // setInterval(function(){console.log(oneSelector.value)}, 1000)
 
 function oneSelect(){oneAudio.src = oneSelector.value; onePlay();}
 
 function alertUpload() { 
     alert("Coming Soon!!"); 
-    // oneSelector.value = './assets/sounds/Hyena Long.flac'; 
-    // onePlay;
+    oneSelector.value = './assets/sounds/Hyena Long.flac'; 
+    onePlay();
 }
     
     // function oneMaxDurSet(){oneSeek.max = oneAudio.duration;}

@@ -10,7 +10,9 @@ body{
     margin: 25px auto;
     opacity: 0.5;
     background: #702020;
-    transition: 0.05s;
+    transition: 0.2s;
+    display: flex;
+    flex-wrap: wrap;
 }
 .sound:hover{
     /* cursor: all-scroll; */
@@ -18,18 +20,17 @@ body{
     /* border: 1px solid white; */
 }
 .playing{
-    border-radius: 5px;
-    border: 3px solid black;
     opacity: 0.8;
     background: #207020;
-    transition: 0.05s;
+    transition: 0.1s;
 }
 .controls{
+    display: inline-flex;
+    float: none;
     /* border: 1px solid black; */
     border-radius: 5px;
     height: 100%;
     width: 10%;
-    display: block;
     min-width: 50px;
 }
 .controls:hover{
@@ -73,13 +74,15 @@ body{
 .inactive{
     display: none;
 }
-    .sliders{
-    /* display: block; */
+.sliders{
+    display: flexbox;
+    float: none;
     /* border: 1px solid red; */
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    font-size: 11px;
+    font-size: 18px;
     height: 5px;
+    margin-left: 25px;
 }
 .slider:hover{
     cursor: pointer;
@@ -87,13 +90,24 @@ body{
 .slider{
     margin: 5px;
     position: relative;
-    top: 10px;
+    top: 9px;
+    width: 70%;
+    margin-left: 15px;
+}
+label.volume{
+    position: relative;
+    top: -15px;
 }
 .seek{
     width: 80%;
     /* display: flex; */
 }
+.selector{
+    display: inline-block;
+
+}
 .sound-selector{
-    margin-left: 123px;
-    width: 123px;
+    margin-left: 50px;
+    width: 500px;
+    display: inline-block;
 }

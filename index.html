@@ -46,7 +46,7 @@ onclick="//oneToggle()"
                 onchange="oneSeekSet()" 
                 > </label>
             <br> -->
-            <label> volume: <input 
+            <label class="volume">channel volume: <input 
                 type="range" 
                 class="volume slider" 
                 id="one-vol"
@@ -56,16 +56,15 @@ onclick="//oneToggle()"
                 step="0.01"
                 onchange="oneVolumeSet()"
                 > </label>
-            <select 
-            class="sound-selector" 
-            id="one-selector"
-            onchange="oneSelect()"
-            >
-                <option selected value='./assets/sounds/Hyena Long.flac'>Hyena</option>
-                <option value='./assets/sounds/FootFoot.flac'>FootFoot</option>
-                <option onclick="alertUpload()" value='none'>Upload</option>
-            </select>
-        </div>
+                <br>
+                <div class="selector">
+                    <select class="sound-selector" id="one-selector" onchange="oneSelect()">
+                            <option selected value='./assets/sounds/Hyena Long.flac'>Hyena</option>
+                            <option value='./assets/sounds/FootFoot.flac'>FootFoot</option>
+                            <option onclick="alertUpload()" value='none'>Upload</option>
+                        </select>
+                    </div>
+                </div>
 </div>
     
     
