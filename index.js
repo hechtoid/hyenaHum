@@ -62,8 +62,12 @@ function oneSelect(){oneAudio.src = oneSelector.value; onePlay();}
 
 function alertUpload() { 
     alert("Coming Soon!!"); 
-    oneSelector.value = './assets/sounds/Hyena Long.flac'; 
-    onePlay();
+    oneAudio.pause();
+    oneDiv.classList.remove("playing");
+    onePauseButton.classList.add("inactive");
+    onePlayButton.classList.remove("inactive");
+    // oneSelector.value = './assets/sounds/Hyena Long.flac'; 
+    // onePlay();
 }
     
     // function oneMaxDurSet(){oneSeek.max = oneAudio.duration;}

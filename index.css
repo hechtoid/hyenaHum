@@ -32,6 +32,7 @@ body{
     height: 100%;
     width: 10%;
     min-width: 50px;
+    z-index: 100;
 }
 .controls:hover{
     cursor: pointer;
@@ -104,9 +105,9 @@ label.volume{
 }
 .selector{
     display: inline-block;
-
 }
 .sound-selector{
+    /* border-radius: 5px; */
     margin-left: 50px;
     width: 500px;
     display: inline-block;
