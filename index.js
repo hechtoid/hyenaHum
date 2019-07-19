@@ -9,14 +9,13 @@ var oneAudio = document.getElementById("one-audio");
 var oneDiv = document.getElementById("one-div");
 var oneSeek = document.getElementById("one-seek");
 var oneVol = document.getElementById("one-vol");
-// var oneSelector = document.getElementById("one-selector");
-var oneSelector = document.getElementsByClassName("sound-selector")[0]
-
-console.log(oneSelector.value);
+var oneSelector = document.getElementById("one-selector");
 
 function onePlay(){
     oneAudio.play();
-    oneDiv.classList.add("playing")
+    if (oneAudio.src.includes('none')){
+        oneDiv.classList.remove("playing")
+    } else { oneDiv.classList.add("playing")}
 }
 function oneStop() { 
     oneAudio.pause(); 
@@ -26,12 +25,13 @@ function oneStop() {
 
 function oneMaxDurSet(){oneSeek.max = oneAudio.duration;}
 function oneDurSet(){oneSeek.value = oneAudio.currentTime};
-function oneSeekSet(){oneAudio.currentTime = oneSeek.value;}
+function oneSeekSet(){oneAudio.currentTime = oneSeek.value; onePlay()}
 function oneReSet(){oneAudio.play(); oneSeek.value = oneAudio.currentTime;}
 
 function oneVolumeSet(){oneAudio.volume = oneVol.value;}
 
-setInterval(function(){console.log(oneSelector.value)}, 1000)
+setInterval(function(){console.log(oneAudio.src)}, 1000)
+// setInterval(function(){console.log(oneSelector.value)}, 1000)
 
 function oneSelect(){oneAudio.src = oneSelector.value; onePlay();}
 function alertUpload(){alert("Coming Soon!!")}

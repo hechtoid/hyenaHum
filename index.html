@@ -13,11 +13,11 @@
     controls
     id="one-audio"
     preload="metadata" 
+    src='./assets/sounds/Hyena Long.flac'
     onloadedmetadata="oneMaxDurSet()" 
     ontimeupdate="oneDurSet()"
     onended="oneReSet()"
     >
-    <source src='./assets/sounds/FootFoot.flac' type="audio/flac">
     </audio>        
 <div class="sound" id="one-div">
         <div class="controls">
@@ -54,17 +54,17 @@
                 > </label>
             <select 
             class="sound-selector" 
-            id="one-select"
+            id="one-selector"
             onchange="oneSelect()"
             >
-                <option value='./assets/sounds/Hyena Long.flac'>Hyena</option>
+                <option selected value='./assets/sounds/Hyena Long.flac'>Hyena</option>
                 <option value='./assets/sounds/FootFoot.flac'>FootFoot</option>
-                <option onclick="alertUpload()" >Upload</option>
+                <option onclick="alertUpload()" value='none'>Upload</option>
             </select>
         </div>
 </div>
     
     
-    <script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
