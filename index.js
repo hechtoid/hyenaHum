@@ -5,13 +5,16 @@
 // console.log(audio.seekable)
 // setTimeout(function(){oneAudio.play()}, 3000)
 
-var oneAudio = document.getElementById("one-audio");
-var oneDiv = document.getElementById("one-div");
-// var oneSeek = document.getElementById("one-seek");
-var oneVol = document.getElementById("one-vol");
-var oneSelector = document.getElementById("one-selector");
-var onePlayButton = document.getElementById("one-play");
-var onePauseButton = document.getElementById("one-pause");
+let oneAudio = document.getElementById("one-audio");
+let oneDiv = document.getElementById("one-div");
+// let oneSeek = document.getElementById("one-seek");
+let oneVol = document.getElementById("one-vol");
+let oneSelector = document.getElementById("one-selector");
+let onePlayButton = document.getElementById("one-play");
+let onePauseButton = document.getElementById("one-pause");
+
+//TESTING ONLY
+oneAudio.muted = true
 
 function onePlay(){
     oneAudio.play();
