@@ -17,19 +17,19 @@
     ontimeupdate="oneDurSet()"
     onended="oneReSet()"
     >
-    <source src='./assets/sounds/Hyena Long.flac' type="audio/flac">
+    <source src='./assets/sounds/FootFoot.flac' type="audio/flac">
     </audio>        
-<div class="sound" id="div-one">
+<div class="sound" id="one-div">
         <div class="controls">
-            <div 
+            <span 
             class="play control" 
             id="one-play"
             onclick="onePlay()"
-            >▶</div>
-            <div class="stop control" 
+            >|▶</span>
+            <span class="stop control" 
             id="one-stop"            
             onclick="oneStop()"
-            >⏹</div>
+            >⏹</span>
         </div>
         <div class="sliders">
             <label> seeker: <input 
@@ -52,10 +52,14 @@
                 step="0.01"
                 onchange="oneVolumeSet()"
                 > </label>
-            <select class="sound-selector" id="one-select">
-                <option>Noise</option>
-                <option>Sound</option>
-                <option>Upload</option>
+            <select 
+            class="sound-selector" 
+            id="one-select"
+            onchange="oneSelect()"
+            >
+                <option value='./assets/sounds/Hyena Long.flac'>Hyena</option>
+                <option value='./assets/sounds/FootFoot.flac'>FootFoot</option>
+                <option onclick="alertUpload()" >Upload</option>
             </select>
         </div>
 </div>

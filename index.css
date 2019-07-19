@@ -1,15 +1,19 @@
 body{
-    background: black;
+    background: #555555;
     font-family: sans-serif;
 }
 .sound{
     border-radius: 5px;
-    border: 2px solid lime;
+    border: 3px solid red;
     width: 80vw;
     height: 10vh;
     margin: 25px auto;
-    background: beige;
-    display: flex;
+    background: gray;
+    transition: 0.2s
+}
+.playing{
+    border: 3px solid lime;
+    transition: 0.2s
 }
 .controls{
     border-radius: 5px;
@@ -19,21 +23,32 @@ body{
     display: block;
     min-width: 50px;
 }
-.play{
-    /* margin-bottom: 10px; */
-    font-size: 36px;
-    margin-left: 18px;
-}
-.stop{
-    font-size: 42px;
-    margin-left: 10px;
-}
 .control{
-    width: 23px;
+    /* border: 1px solid red; */
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+    left: -5px;
+    /* padding: 5px; */
+    transition: 0.2s;
 }
 .control:hover{
     cursor: pointer;
-    transform: scale(1.2)
+    transform: scale(1.1);
+    color: white;
+    transition: 0.2s;
+}
+.play{
+    /* margin-bottom: 10px; */
+    font-size: 33px;
+    margin-left: 11px;
+    width: 45px;
+    height: 42px;
+}
+.stop{
+    font-size: 42px;
+    height: 20px;
+    margin-left: 10px;
 }
 .sliders{
     display: block;
