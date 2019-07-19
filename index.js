@@ -7,31 +7,60 @@
 
 var oneAudio = document.getElementById("one-audio");
 var oneDiv = document.getElementById("one-div");
-var oneSeek = document.getElementById("one-seek");
+// var oneSeek = document.getElementById("one-seek");
 var oneVol = document.getElementById("one-vol");
 var oneSelector = document.getElementById("one-selector");
+var onePlayButton = document.getElementById("one-play");
+var onePauseButton = document.getElementById("one-pause");
 
 function onePlay(){
     oneAudio.play();
     if (oneAudio.src.includes('none')){
         oneDiv.classList.remove("playing")
-    } else { oneDiv.classList.add("playing")}
+        onePauseButton.classList.add("inactive");
+        onePlayButton.classList.remove("inactive");
+    } else { 
+        oneDiv.classList.add("playing")
+        onePlayButton.classList.add("inactive");
+        onePauseButton.classList.remove("inactive");
+    }
 }
-function oneStop() { 
+function oneToggle(){
+    if (oneAudio.paused){
+        oneAudio.play();
+        oneDiv.classList.add("playing");
+        onePlayButton.classList.add("inactive");
+        onePauseButton.classList.remove("inactive");
+    } else { 
+        oneAudio.pause(); 
+        oneDiv.classList.remove("playing");
+        onePauseButton.classList.add("inactive");
+        onePlayButton.classList.remove("inactive");
+    }
+}
+function onePause() { 
     oneAudio.pause(); 
     oneAudio.currentTime = 0; 
     oneDiv.classList.remove("playing")
 }
-
-function oneMaxDurSet(){oneSeek.max = oneAudio.duration;}
-function oneDurSet(){oneSeek.value = oneAudio.currentTime};
-function oneSeekSet(){oneAudio.currentTime = oneSeek.value; onePlay()}
-function oneReSet(){oneAudio.play(); oneSeek.value = oneAudio.currentTime;}
+// function oneCheck() {
+//     oneAudio.paused
+// }
 
 function oneVolumeSet(){oneAudio.volume = oneVol.value;}
 
-setInterval(function(){console.log(oneAudio.src)}, 1000)
+setInterval(function(){console.log(oneAudio.paused)}, 1000)
 // setInterval(function(){console.log(oneSelector.value)}, 1000)
 
 function oneSelect(){oneAudio.src = oneSelector.value; onePlay();}
-function alertUpload(){alert("Coming Soon!!")}
+
+function alertUpload() { 
+    alert("Coming Soon!!"); 
+    // oneSelector.value = './assets/sounds/Hyena Long.flac'; 
+    // onePlay;
+}
+    
+    // function oneMaxDurSet(){oneSeek.max = oneAudio.duration;}
+    // function oneDurSet(){oneSeek.value = oneAudio.currentTime};
+    // function oneSeekSet(){oneAudio.currentTime = oneSeek.value; onePlay()}
+    // function oneReSet(){oneAudio.play(); oneSeek.value = oneAudio.currentTime;}

@@ -14,25 +14,29 @@
     id="one-audio"
     preload="metadata" 
     src='./assets/sounds/Hyena Long.flac'
-    onloadedmetadata="oneMaxDurSet()" 
-    ontimeupdate="oneDurSet()"
-    onended="oneReSet()"
+    onloadedmetadata="//oneMaxDurSet()" 
+    ontimeupdate="//oneDurSet()"
+    onended="//oneReSet()"
     >
     </audio>        
-<div class="sound" id="one-div">
+<div 
+class="sound" 
+id="one-div"
+onclick="//oneToggle()"
+>
         <div class="controls">
             <span 
             class="play control" 
             id="one-play"
-            onclick="onePlay()"
-            >|▶</span>
-            <span class="stop control" 
-            id="one-stop"            
-            onclick="oneStop()"
-            >⏹</span>
+            onclick="oneToggle()"
+            >▶</span>
+            <span class="pause control inactive" 
+            id="one-pause"            
+            onclick="oneToggle()"
+            >⏸</span>
         </div>
-        <div class="sliders">
-            <label> seeker: <input 
+        <div class="sliders" onclick="event.stopPropagation()">
+            <!-- <label> seeker: <input 
                 type="range" 
                 class="seek slider" 
                 id="one-seek"
@@ -41,7 +45,7 @@
                 value="0"
                 onchange="oneSeekSet()" 
                 > </label>
-            <br>
+            <br> -->
             <label> volume: <input 
                 type="range" 
                 class="volume slider" 

@@ -6,22 +6,31 @@ body{
     border-radius: 5px;
     border: 3px solid red;
     width: 80vw;
-    height: 10vh;
+    height: 100px;
     margin: 25px auto;
     background: gray;
-    transition: 0.2s
+    transition: 0.05s
+}
+.sound:hover{
+    /* cursor: all-scroll; */
+    /* transform: scale(1.01); */
+    /* border: 1px solid white; */
 }
 .playing{
+    border-radius: 5px;
     border: 3px solid lime;
-    transition: 0.2s
+    transition: 0.05s
 }
 .controls{
     border-radius: 5px;
-    border: 2px solid black;
-    height: 96%;
+    /* border: 2px solid black; */
+    height: 75%;
     width: 10%;
     display: block;
     min-width: 50px;
+}
+.controls:hover{
+    cursor: pointer;
 }
 .control{
     /* border: 1px solid red; */
@@ -34,28 +43,33 @@ body{
 }
 .control:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     color: white;
     transition: 0.2s;
 }
 .play{
     /* margin-bottom: 10px; */
-    font-size: 33px;
-    margin-left: 11px;
-    width: 45px;
-    height: 42px;
+    font-size: 64px;
+    margin-left: 15px;
+    width: 55px;
+    /* height: 42px; */
 }
-.stop{
-    font-size: 42px;
-    height: 20px;
+.pause{
+    font-size: 55px;
+    /* height: 20px; */
+    width: 45px;
     margin-left: 10px;
 }
+.inactive{
+    display: none;
+}
 .sliders{
-    display: block;
-    /* border: 1px solid red; */
+    /* display: block; */
+    border: 1px solid red;
     width: 100%;
     padding: 10px;
     font-size: 11px;
+    height: 5px;
 }
 .slider:hover{
     cursor: pointer;
