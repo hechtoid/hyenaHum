@@ -60,7 +60,10 @@ setInterval(function () { console.log(oneAudio.src)}, 1000)
 
 function oneSelect(){
     if (oneSelector.value === "none"){
-        alertUpload();   
+        alertUpload();
+        oneSelector.value = './assets/sounds/Hyena Long.flac';
+        // setTimeout(function(){oneAudio.play()}, 1000)
+
     } else{
         oneAudio.src = oneSelector.value; 
         onePlay();
