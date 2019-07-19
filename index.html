@@ -10,13 +10,10 @@
 
 <body>      
 
-<div 
-class="sound" 
-id="one-div"
-onclick="//oneToggle()">
+<div class="sound" id="one-div">
     <div 
     class="controls"
-    onclick="oneToggle()">
+    onclick="oneSound.soundToggle()">
         <div 
         class="play control" 
         id="one-play">
@@ -28,7 +25,7 @@ onclick="//oneToggle()">
             ⏸
         </div>
     </div>
-    <div class="sliders" onclick="event.stopPropagation()">
+    <div class="sliders">
     <!--<label> seeker: 
             <input 
             type="range" 
@@ -46,9 +43,9 @@ onclick="//oneToggle()">
             id="one-vol"
             min="0"
             max="1"
-            value="1"
+            value="0"
             step="0.01"
-            onchange="oneVolumeSet()"
+            onchange="oneSound.soundVolumeSet()"
             > 
         </label>
             <br>
@@ -56,15 +53,15 @@ onclick="//oneToggle()">
             <select 
             class="sound-selector" 
             id="one-selector" 
-            onchange="oneSelect()">
+            onchange="oneSound.soundSelect()">
                 <option 
                 selected 
-                onclick="oneSelect()" 
+                onclick="oneSound.soundSelect()" 
                 value='./assets/sounds/Hyena Long.flac'>
                 Hyena
                 </option>
                 <option 
-                onclick="oneSelect()" 
+                onclick="oneSound.soundSelect()" 
                 value='./assets/sounds/FootFoot.flac'>
                 FootFoot
                 </option>

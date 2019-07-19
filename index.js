@@ -3,83 +3,99 @@
 // setInterval(function(){console.log(audio.paused)}, 1000)
 // audio.loop=false
 // console.log(audio.seekable)
-// setTimeout(function(){oneAudio.play()}, 3000)
 
-let oneAudio = document.getElementById("one-audio");
-let oneDiv = document.getElementById("one-div");
-// let oneSeek = document.getElementById("one-seek");
-let oneVol = document.getElementById("one-vol");
-let oneSelector = document.getElementById("one-selector");
-let onePlayButton = document.getElementById("one-play");
-let onePauseButton = document.getElementById("one-pause");
+
+
+let Sound = class {
+    constructor(number) {
+        this.number = number;
+let soundNumber = number
+let soundAudio = document.getElementById(`${soundNumber}-audio`);
+let soundDiv = document.getElementById(`${soundNumber}-div`);
+// soundSeek = document.getElementById(`${soundNumber}-seek`);
+let soundVol = document.getElementById(`${soundNumber}-vol`);
+let soundSelector = document.getElementById(`${soundNumber}-selector`);
+let soundPlayButton = document.getElementById(`${soundNumber}-play`);
+let soundPauseButton = document.getElementById(`${soundNumber}-pause`);
+this.soundAudio = soundAudio
+this.soundDiv = soundDiv
+this.soundVol = soundVol
+this.soundSelector = soundSelector
+this.soundPlayButton = soundPlayButton
+this.soundPauseButton  = soundPauseButton 
 
 //TESTING ONLY
-oneAudio.muted = true
+soundAudio.muted = true
+setInterval(function(){console.log(soundAudio)}, 1000)
+}
 
-function onePlay(){
-    oneAudio.play();
-    // if (oneAudio.src.includes('none')){
-    //     oneDiv.classList.remove("playing")
-    //     onePauseButton.classList.add("inactive");
-    //     onePlayButton.classList.remove("inactive");
+soundPlay(){
+    this.soundAudio.play();
+    // if (soundAudio.src.includes('none')){
+    //     soundDiv.classList.remove("playing")
+    //     soundPauseButton.classList.add("inactive");
+    //     soundPlayButton.classList.remove("inactive");
     // } else { 
-        oneDiv.classList.add("playing")
-        onePlayButton.classList.add("inactive");
-        onePauseButton.classList.remove("inactive");
+        this.soundDiv.classList.add("playing")
+        this.soundPlayButton.classList.add("inactive");
+        this.soundPauseButton.classList.remove("inactive");
     // }
 }
-function oneToggle(){
-    if (oneAudio.paused && !oneAudio.src.includes('none')){
-        oneAudio.play();
-        oneDiv.classList.add("playing");
-        onePlayButton.classList.add("inactive");
-        onePauseButton.classList.remove("inactive");
+soundToggle(){
+    if (this.soundAudio.paused && !this.soundAudio.src.includes('none')){
+        this.soundAudio.play();
+        this.soundDiv.classList.add("playing");
+        this.soundPlayButton.classList.add("inactive");
+        this.soundPauseButton.classList.remove("inactive");
     } else { 
-        oneAudio.pause(); 
-        oneDiv.classList.remove("playing");
-        onePauseButton.classList.add("inactive");
-        onePlayButton.classList.remove("inactive");
+        this.soundAudio.pause(); 
+        this.soundDiv.classList.remove("playing");
+        this.soundPauseButton.classList.add("inactive");
+        this.soundPlayButton.classList.remove("inactive");
     }
 }
-function onePause() { 
-    oneAudio.pause(); 
-    oneAudio.currentTime = 0; 
-    oneDiv.classList.remove("playing")
+soundPause() { 
+    this.soundAudio.pause(); 
+    this.soundAudio.currentTime = 0; 
+    this.soundDiv.classList.remove("playing")
 }
-// function oneCheck() {
-//     oneAudio.paused
+// soundCheck() {
+//     soundAudio.paused
 // }
 
-function oneVolumeSet(){
-    oneAudio.muted = false;
-    oneAudio.volume = oneVol.value;
+soundVolumeSet(){
+    this.soundAudio.muted = false;
+    this.soundAudio.volume = this.soundVol.value;
 }
 
-setInterval(function () { console.log(oneAudio.src)}, 1000)
-// setInterval(function(){console.log(oneSelector.value)}, 1000)
+// setInterval(){(console.log(soundAudio.src), 1000)}
+// setInterval(function(){console.log(soundSelector.value)}, 1000)
 
-function oneSelect(){
-    if (oneSelector.value === "none"){
-        alertUpload();
-        oneSelector.value = './assets/sounds/Hyena Long.flac';
-        // setTimeout(function(){oneAudio.play()}, 1000)
-
+alertUpload() { 
+    let that = this
+    alert("Coming Soon!!"); 
+    this.soundAudio.pause();
+    this.soundDiv.classList.remove("playing");
+    this.soundPauseButton.classList.add("inactive");
+    this.soundPlayButton.classList.remove("inactive");
+    this.soundSelector.value = './assets/sounds/Hyena Long.flac';
+    setTimeout(function(){that.soundPlay()}, 3000)
+    // soundSelector.value = './assets/sounds/Hyena Long.flac'; 
+    // soundPlay();
+}
+soundSelect(){
+    if (this.soundSelector.value === "none"){
+        this.alertUpload();
     } else{
-        oneAudio.src = oneSelector.value; 
-        onePlay();
+        this.soundAudio.src = this.soundSelector.value; 
+        this.soundPlay();
     }
 }
-function alertUpload() { 
-    alert("Coming Soon!!"); 
-    oneAudio.pause();
-    oneDiv.classList.remove("playing");
-    onePauseButton.classList.add("inactive");
-    onePlayButton.classList.remove("inactive");
-    // oneSelector.value = './assets/sounds/Hyena Long.flac'; 
-    // onePlay();
-}
     
-    // function oneMaxDurSet(){oneSeek.max = oneAudio.duration;}
-    // function oneDurSet(){oneSeek.value = oneAudio.currentTime};
-    // function oneSeekSet(){oneAudio.currentTime = oneSeek.value; onePlay()}
-    // function oneReSet(){oneAudio.play(); oneSeek.value = oneAudio.currentTime;}
+    // soundMaxDurSet(){soundSeek.max = soundAudio.duration;}
+    // soundDurSet(){soundSeek.value = soundAudio.currentTime};
+    // soundSeekSet(){soundAudio.currentTime = soundSeek.value; soundPlay()}
+    // soundReSet(){soundAudio.play(); soundSeek.value = soundAudio.currentTime;}
+}
+
+const oneSound = new Sound('one')

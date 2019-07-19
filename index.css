@@ -37,7 +37,7 @@ body{
     border-radius: 5px;
     height: 100%;
     width: 10%;
-    min-width: 50px;
+    min-width: 75px;
     color: white;
     z-index: 100;
 }
@@ -91,17 +91,17 @@ body{
     font-size: 18px;
     font-weight: 700;
     height: 5px;
-    margin-left: 25px;
+    /* margin-left: 25px; */
 }
 .slider:hover{
     cursor: pointer;
 }
 .slider{
     margin: 5px;
-    padding-left: 50px;
+    /* padding1-left: 50px; */
     position: relative;
     top: 9px;
-    width: 60%;
+    width: 50%;
     margin-left: 15px;
 }
 label.volume{
