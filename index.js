@@ -1,9 +1,3 @@
-// console.log(audio.paused);
-// audio.muted=true
-// setInterval(function(){console.log(audio.paused)}, 1000)
-// audio.loop=false
-// console.log(audio.seekable)
-
 
 
 let Sound = class {
@@ -24,8 +18,10 @@ this.soundSelector = soundSelector
 this.soundPlayButton = soundPlayButton
 this.soundPauseButton  = soundPauseButton 
 
+
 //TESTING ONLY
-soundAudio.muted = true
+// audio.loop=false
+this.soundAudio.muted = true
 setInterval(function(){console.log(soundAudio)}, 1000)
 }
 
@@ -95,7 +91,10 @@ soundSelect(){
     // soundMaxDurSet(){soundSeek.max = soundAudio.duration;}
     // soundDurSet(){soundSeek.value = soundAudio.currentTime};
     // soundSeekSet(){soundAudio.currentTime = soundSeek.value; soundPlay()}
-    // soundReSet(){soundAudio.play(); soundSeek.value = soundAudio.currentTime;}
+// soundReSet(){
+//     this.soundAudio.currentTime = 0;
+//     this.soundPlay()
+// }
 }
 
 const oneSound = new Sound('one')
