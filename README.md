@@ -56,3 +56,5 @@ This project will begin with no server, although I may end up throwing up a simp
 ### Day 4
 1) Advanced Vizh
 2) Allow User Customization of Noise
+
+**noise.js via Zach Denton**

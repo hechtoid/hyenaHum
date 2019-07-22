@@ -1,3 +1,5 @@
+//thanks to Zach Denton
+//
 (function(AudioContext) {
 	AudioContext.prototype.createWhiteNoise = function(bufferSize) {
 		bufferSize = bufferSize || 4096;
