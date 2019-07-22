@@ -148,6 +148,25 @@
     <br>
     <br>
     <br>
+    <div class="selector">
+        <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
+            <option selected onclick="noiseSelect()" value='none'>
+                none
+            </option>
+            <option onclick="noiseSelect()" value='white'>
+                white
+            </option>
+            <option onclick="noiseSelect()" value='brown'>
+                brown
+            </option>
+            <option onclick="noiseSelect()" value='pink'>
+                pink
+            </option>
+            <option onclick="//noiseSelect()" value='custom'>
+                custom
+            </option>
+        </select>
+    </div>
     <br>
     <br>
     <br>
@@ -171,6 +190,10 @@
 <br>
 <br>
 
+
+
 <script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src='./noises.js'></script>
+<script type="module" src='./noise.js'></script>
 </body>
 </html>

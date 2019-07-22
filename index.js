@@ -1,5 +1,3 @@
-
-
 let Sound = class {
     constructor(number) {
         this.number = number;
@@ -23,7 +21,7 @@ this.soundPauseButton  = soundPauseButton
 // audio.loop=false
 // this.soundAudio.muted = true
 this.soundAudio.volume = 0.25
-setInterval(function(){console.log(soundAudio)}, 1000)
+// setInterval(function(){console.log(soundAudio)}, 1000)
 // setInterval(){(console.log(soundAudio.src), 1000)}
 // setInterval(function(){console.log(soundSelector.value)}, 1000)
 }
@@ -82,6 +80,7 @@ soundSelect(){
         this.soundPlay();
     }
 }
+
 //SEEKBAR 
 // soundMaxDurSet(){soundSeek.max = soundAudio.duration;}
 // soundDurSet(){soundSeek.value = soundAudio.currentTime};
