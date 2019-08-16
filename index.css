@@ -6,7 +6,7 @@ body{
     background: #702020;
     border: 5px solid white;
     border-radius: 10px;
-    width: 80vw;
+    width: 75vw;
     height: 100px;
     margin: 25px auto;
     margin-top: 5px;
@@ -105,13 +105,14 @@ body{
     /* padding1-left: 50px; */
     position: relative;
     top: 9px;
-    width: 50%;
+    width: 25%;
     margin-left: 15px;
 }
 label.volume{
     position: relative;
     top: -15px;
     color: white;
+    /* margin-left: 50px; */
 }
 .seek{
     width: 80%;
@@ -122,6 +123,6 @@ label.volume{
     width: 100%;
 }
 .sound-selector{
-    width: 100%;
+    width: 75%;
     display: inline-block;
 }
