@@ -1,11 +1,11 @@
 # hyena/Hum
 ### a webapp to modulate and loop your background noise       
 ## MVPs
-- [ ] intuitive ui - simple controls, simple visualization 
-- [ ] control and stream sound       
+- [x] intuitive ui - simple controls, simple visualization 
+- [x] control and stream sound       
     * PreSet White, Pink, and Brown Noises      
     * Loaded with appropriate Seed Sounds
-- [ ] select and combine multiple sounds 
+- [x] select and combine multiple sounds 
 - [ ] scripturally modulate volume, then other effects. first combined, then individually 
 - [ ] Customize Sounds      
     * upload and utilize user sounds        
