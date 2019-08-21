@@ -20,7 +20,7 @@ this.soundPauseButton  = soundPauseButton
 //TESTING ONLY
 // audio.loop=false
 // this.soundAudio.muted = true
-this.soundAudio.volume = 0.25
+this.soundAudio.volume = 0.9
 // setInterval(function(){console.log(soundAudio)}, 1000)
 // setInterval(){(console.log(soundAudio.src), 1000)}
 // setInterval(function(){console.log(soundSelector.value)}, 1000)
@@ -67,7 +67,7 @@ alertUpload() {
     this.soundDiv.classList.remove("playing");
     this.soundPauseButton.classList.add("inactive");
     this.soundPlayButton.classList.remove("inactive");
-    this.soundSelector.value = './assets/sounds/Hyena Long.flac';
+    this.soundSelector.value = './assets/sounds/haha.flac';
     setTimeout(function(){that.soundPlay()}, 3000)
     // soundSelector.value = './assets/sounds/Hyena Long.flac'; 
     // soundPlay();

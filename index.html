@@ -9,9 +9,6 @@
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-
-
-
     <title>hyenaHum - your Noises Looped</title>
 </head>
 
@@ -32,16 +29,19 @@
             <input type="range" class="seek slider" id="one-seek" min="0" step="0.1" value="0" onchange="oneSeekSet()"> 
         </label>-->
         <label class="volume"><i class="fas fa-volume-up"></i> 
-            <input type="range" class="volume slider" id="one-vol" min="0" max="1" value="0.25" step="0.01" onchange="oneSound.soundVolumeSet()" > 
+            <input type="range" class="volume slider" id="one-vol" min="0" max="1" value="0.9" step="0.01" onchange="oneSound.soundVolumeSet()" > 
         </label>
             <br>
         <div class="selector">
             <select class="sound-selector" id="one-selector" onchange="oneSound.soundSelect()">
-                <option selected onclick="oneSound.soundSelect()"  value='./assets/sounds/Hyena Long.flac'>
-                Hyena
+                <option selected onclick="oneSound.soundSelect()"  value='./assets/sounds/haha.flac'>
+                hyena
                 </option>
-                <option onclick="oneSound.soundSelect()" value='./assets/sounds/FootFoot.flac'>
-                FootFoot
+                <option onclick="oneSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                indie
+                </option>
+                <option onclick="oneSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                    piano
                 </option>
                 <option onclick="//alertUpload()" value='none'>
                 User Upload
@@ -61,21 +61,21 @@
             </div>
         </div>
         <div class="sliders">
-            <!--<label> seeker: 
-                <input type="range" class="seek slider" id="two-seek" min="0" step="0.1" value="0" onchange="twoSeekSet()"> 
-            </label>-->
         <label class="volume"><i class="fas fa-volume-up"></i>
-                <input type="range" class="volume slider" id="two-vol" min="0" max="1" value="0.25" step="0.01"
+                <input type="range" class="volume slider" id="two-vol" min="0" max="1" value="0.9" step="0.01"
                     onchange="twoSound.soundVolumeSet()">
             </label>
             <br>
             <div class="selector">
                 <select class="sound-selector" id="two-selector" onchange="twoSound.soundSelect()">
-                    <option onclick="twoSound.soundSelect()" value='./assets/sounds/Hyena Long.flac'>
-                        Hyena
+                    <option onclick="twoSound.soundSelect()" value='./assets/sounds/haha.flac'>
+                        hyena
                     </option>
-                    <option selected onclick="twoSound.soundSelect()" value='./assets/sounds/FootFoot.flac'>
-                        FootFoot
+                    <option selected onclick="twoSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                        indie
+                    </option>
+                    <option onclick="oneSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                        piano
                     </option>
                     <option onclick="//alertUpload()" value='none'>
                         User Upload
@@ -95,21 +95,21 @@
         </div>
     </div>
     <div class="sliders">
-        <!--<label> seeker: 
-                <input type="range" class="seek slider" id="three-seek" min="0" step="0.1" value="0" onchange="threeSeekSet()"> 
-            </label>-->
         <label class="volume"><i class="fas fa-volume-up"></i>
-            <input type="range" class="volume slider" id="three-vol" min="0" max="1" value="0.25" step="0.01"
+            <input type="range" class="volume slider" id="three-vol" min="0" max="1" value="0.9" step="0.01"
                 onchange="threeSound.soundVolumeSet()">
         </label>
         <br>
         <div class="selector">
             <select class="sound-selector" id="three-selector" onchange="threeSound.soundSelect()">
-                <option selected onclick="threeSound.soundSelect()" value='./assets/sounds/Hyena Long.flac'>
-                    Hyena
+                <option selected onclick="threeSound.soundSelect()" value='./assets/sounds/haha.flac'>
+                    hyena
                 </option>
-                <option onclick="threeSound.soundSelect()" value='./assets/sounds/FootFoot.flac'>
-                    FootFoot
+                <option onclick="threeSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                    indie
+                </option>
+                <option onclick="oneSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                    piano
                 </option>
                 <option onclick="//alertUpload()" value='none'>
                     User Upload
@@ -129,21 +129,21 @@
         </div>
     </div>
     <div class="sliders">
-        <!--<label> seeker: 
-                <input type="range" class="seek slider" id="four-seek" min="0" step="0.1" value="0" onchange="fourSeekSet()"> 
-            </label>-->
         <label class="volume"><i class="fas fa-volume-up"></i>
-            <input type="range" class="volume slider" id="four-vol" min="0" max="1" value="0.25" step="0.01"
+            <input type="range" class="volume slider" id="four-vol" min="0" max="1" value="0.9" step="0.01"
                 onchange="fourSound.soundVolumeSet()">
         </label>
         <br>
         <div class="selector">
             <select class="sound-selector" id="four-selector" onchange="fourSound.soundSelect()">
-                <option selected onclick="fourSound.soundSelect()" value='./assets/sounds/Hyena Long.flac'>
-                    Hyena
+                <option selected onclick="fourSound.soundSelect()" value='./assets/sounds/haha.flac'>
+                    hyena
                 </option>
-                <option onclick="fourSound.soundSelect()" value='./assets/sounds/FootFoot.flac'>
-                    FootFoot
+                <option onclick="fourSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                    indie
+                </option>
+                <option onclick="oneSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                    piano
                 </option>
                 <option onclick="//alertUpload()" value='none'>
                     User Upload
@@ -177,16 +177,16 @@
     <br>
     <br>
     <br>
-<audio controls loop id="one-audio" preload="metadata" src='./assets/sounds/Hyena Long.flac'
+<audio controls loop id="one-audio" preload="metadata" src='./assets/sounds/haha.flac'
     onloadedmetadata="//oneMaxDurSet()" ontimeupdate="//oneDurSet()" onended="//oneReSet()">
 </audio>
-<audio controls loop id="two-audio" preload="metadata" src='./assets/sounds/FootFoot.flac'
+<audio controls loop id="two-audio" preload="metadata" src='./assets/sounds/indie.flac'
     onloadedmetadata="//twoMaxDurSet()" ontimeupdate="//twoDurSet()" onended="//twoSound.soundReSet()">
 </audio>
-<audio controls loop id="three-audio" preload="metadata" src='./assets/sounds/Hyena Long.flac'
+<audio controls loop id="three-audio" preload="metadata" src='./assets/sounds/haha.flac'
     onloadedmetadata="//threeMaxDurSet()" ontimeupdate="//threeDurSet()" onended="//threeSound.soundReSet()">
 </audio>
-<audio controls loop id="four-audio" preload="metadata" src='./assets/sounds/Hyena Long.flac'
+<audio controls loop id="four-audio" preload="metadata" src='./assets/sounds/haha.flac'
     onloadedmetadata="//fourMaxDurSet()" ontimeupdate="//fourDurSet()" onended="//fourSound.soundReSet()">
 </audio>
 <br>
