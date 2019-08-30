@@ -13,6 +13,20 @@
 </head>
 
 <body>      
+    <table><tr>
+        <td>
+            <b>hyenaHum - </b>
+                <br>
+            To mix the soothing sounds of nature with noises we create
+                <br>
+            There are many apps for playing music, this one is for layering loops
+        </td>
+        <td>
+            <div class="stopAll" onclick="stopAllSoundsAndNoises()">
+                STOP ALL NOISES & SOUNDS
+            </div>
+        </td>
+    </tr></table>
 <div class="sound" id="one-div">
     <div 
     class="controls"
@@ -162,13 +176,13 @@
             <option selected onclick="stopNoises()" value='none'>
                 none
             </option>
-            <option onclick="noiseSelect()" value='brown'>
+            <option onclick="noiseSelect('brown')" value='brown'>
                 brown (soothing sound)
             </option>
-            <option onclick="noiseSelect()" value='pink'>
+            <option onclick="noiseSelect('pink')" value='pink'>
                 pink (soft static)
             </option>
-            <option onclick="noiseSelect()" value='white'>
+            <option onclick="noiseSelect('white')" value='white'>
                 white (harsh noise)
             </option>
             <option onclick="//noiseSelect()" value='custom'>
@@ -176,11 +190,11 @@
             </option>
         </select>
     </div>
-    <button onclick="stopAllSoundsAndNoises()">STOP ALL NOISES & SOUNDS</button>
     <br>
     <button onclick="makeWaves()">stay vvavy</button>
 
     <br>
+ 
     <br>
 <audio controls loop id="one-audio" preload="metadata" src='./assets/sounds/haha.flac'
     onloadedmetadata="//oneMaxDurSet()" ontimeupdate="//oneDurSet()" onended="//oneReSet()">

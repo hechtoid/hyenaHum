@@ -19,12 +19,8 @@ let Sound = class {
 
 
         //TESTING ONLY
-        // audio.loop=false
-        // this.soundAudio.muted = true
         this.soundAudio.volume = 0.9
-        // setInterval(function(){console.log(soundAudio)}, 1000)
-        // setInterval(){(console.log(soundAudio.src), 1000)}
-        // setInterval(function(){console.log(soundSelector.value)}, 1000)
+
     }
 
     soundToggle() {
@@ -42,20 +38,16 @@ let Sound = class {
     }
     soundPlay() {
         this.soundAudio.play();
-        // if (soundAudio.src.includes('none')){
-        //     soundDiv.classList.remove("playing")
-        //     soundPauseButton.classList.add("inactive");
-        //     soundPlayButton.classList.remove("inactive");
-        // } else { 
         this.soundDiv.classList.add("playing")
         this.soundPlayButton.classList.add("inactive");
         this.soundPauseButton.classList.remove("inactive");
-        // }
     }
-    soundPause() {
+    soundStop() {
         this.soundAudio.pause();
         this.soundAudio.currentTime = 0;
         this.soundDiv.classList.remove("playing")
+        this.soundPauseButton.classList.add("inactive");
+        this.soundPlayButton.classList.remove("inactive");
     }
     soundVolumeSet() {
         this.soundAudio.muted = false;
@@ -70,8 +62,6 @@ let Sound = class {
         this.soundPlayButton.classList.remove("inactive");
         this.soundSelector.value = './assets/sounds/haha.flac';
         setTimeout(function () { that.soundPlay() }, 3000)
-        // soundSelector.value = './assets/sounds/Hyena Long.flac'; 
-        // soundPlay();
     }
     soundSelect() {
         if (this.soundSelector.value === "none") {
