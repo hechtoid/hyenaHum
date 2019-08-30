@@ -23,10 +23,13 @@
         </td>
         <td>
             <div class="stopAll" onclick="stopAllSoundsAndNoises()">
-                STOP ALL NOISES & SOUNDS
+                STOP ALL SOUNDS & NOISES 
             </div>
         </td>
     </tr></table>
+    <label class="volume">master control: <i class="fas fa-volume-up"></i>
+    
+        <input type="range" id="masterVolume" min="0" max="2" value="1" step="0.01" > 
 <div class="sound" id="one-div">
     <div 
     class="controls"
@@ -42,19 +45,19 @@
     <!--<label> seeker: 
             <input type="range" class="seek slider" id="one-seek" min="0" step="0.1" value="0" onchange="oneSeekSet()"> 
         </label>-->
-        <label class="volume"><i class="fas fa-volume-up"></i> 
+        <label class="volume">track control: <i class="fas fa-volume-up"></i> 
             <input type="range" class="volume slider" id="one-vol" min="0" max="1" value="0.9" step="0.01" onchange="oneSound.soundVolumeSet()" > 
         </label>
             <br>
         <div class="selector">
             <select class="sound-selector" id="one-selector" onchange="oneSound.soundSelect()">
-                <option selected onclick="oneSound.soundSelect()"  value='./assets/sounds/haha.flac'>
+                <option selected onclick="oneSound.soundSelect()"  value='nature'>
                 nature
                 </option>
-                <option onclick="oneSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                <option onclick="oneSound.soundSelect()" value='indie'>
                 indie
                 </option>
-                <option onclick="oneSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                <option onclick="oneSound.soundSelect()" value='piano'>
                     piano
                 </option>
                 <option onclick="//alertUpload()" value='none'>
@@ -75,20 +78,20 @@
             </div>
         </div>
         <div class="sliders">
-        <label class="volume"><i class="fas fa-volume-up"></i>
+        <label class="volume">track control: <i class="fas fa-volume-up"></i>
                 <input type="range" class="volume slider" id="two-vol" min="0" max="1" value="0.9" step="0.01"
                     onchange="twoSound.soundVolumeSet()">
             </label>
             <br>
             <div class="selector">
                 <select class="sound-selector" id="two-selector" onchange="twoSound.soundSelect()">
-                    <option onclick="twoSound.soundSelect()" value='./assets/sounds/haha.flac'>
+                    <option onclick="twoSound.soundSelect()" value='nature'>
                         nature
                     </option>
-                    <option selected onclick="twoSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                    <option selected onclick="twoSound.soundSelect()" value='indie'>
                         indie
                     </option>
-                    <option onclick="twoSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                    <option onclick="twoSound.soundSelect()" value='piano'>
                         piano
                     </option>
                     <option onclick="//alertUpload()" value='none'>
@@ -109,20 +112,20 @@
         </div>
     </div>
     <div class="sliders">
-        <label class="volume"><i class="fas fa-volume-up"></i>
+        <label class="volume">track control: <i class="fas fa-volume-up"></i>
             <input type="range" class="volume slider" id="three-vol" min="0" max="1" value="0.9" step="0.01"
                 onchange="threeSound.soundVolumeSet()">
         </label>
         <br>
         <div class="selector">
             <select class="sound-selector" id="three-selector" onchange="threeSound.soundSelect()">
-                <option selected onclick="threeSound.soundSelect()" value='./assets/sounds/haha.flac'>
+                <option selected onclick="threeSound.soundSelect()" value='nature'>
                     nature
                 </option>
-                <option onclick="threeSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                <option onclick="threeSound.soundSelect()" value='indie'>
                     indie
                 </option>
-                <option onclick="threeSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                <option onclick="threeSound.soundSelect()" value='piano'>
                     piano
                 </option>
                 <option onclick="//alertUpload()" value='none'>
@@ -143,20 +146,20 @@
         </div>
     </div>
     <div class="sliders">
-        <label class="volume"><i class="fas fa-volume-up"></i>
+        <label class="volume">track control: <i class="fas fa-volume-up"></i>
             <input type="range" class="volume slider" id="four-vol" min="0" max="1" value="0.9" step="0.01"
                 onchange="fourSound.soundVolumeSet()">
         </label>
         <br>
         <div class="selector">
             <select class="sound-selector" id="four-selector" onchange="fourSound.soundSelect()">
-                <option selected onclick="fourSound.soundSelect()" value='./assets/sounds/haha.flac'>
+                <option selected onclick="fourSound.soundSelect()" value='nature'>
                     nature
                 </option>
-                <option onclick="fourSound.soundSelect()" value='./assets/sounds/indie.flac'>
+                <option onclick="fourSound.soundSelect()" value='indie'>
                     indie
                 </option>
-                <option onclick="fourSound.soundSelect()" value='./assets/sounds/piano.flac'>
+                <option onclick="fourSound.soundSelect()" value='piano'>
                     piano
                 </option>
                 <option onclick="//alertUpload()" value='none'>
@@ -169,11 +172,15 @@
     <br>
     <br>
     <br>
-    <input type="range" id="volume" min="0" max="2" value="1" step="0.01">
-    <br>
+    <table><tr>
+    <td>  
+    <label class="volume">noise control: <i class="fas fa-volume-up"></i>
+    
+    <input type="range" id="noiseVolume" min="0" max="2" value="1" step="0.01">
+    </td><td>
     <div class="selector">
         <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
-            <option selected onclick="stopNoises()" value='none'>
+            <option selected onclick="stopAllSoundsAndNoises()" value='none'>
                 none
             </option>
             <option onclick="noiseSelect('brown')" value='brown'>
@@ -190,22 +197,23 @@
             </option>
         </select>
     </div>
-    <br>
-    <button onclick="makeWaves()">stay vvavy</button>
-
+    </td><td>
+    <button onclick="makeWaves()">make waves</button>
+    </td>
+    </tr></table>
     <br>
  
     <br>
-<audio controls loop id="one-audio" preload="metadata" src='./assets/sounds/haha.flac'
+<audio controls loop id="one-audio" preload="metadata" src='./assets/sounds/nature.flac'
     onloadedmetadata="//oneMaxDurSet()" ontimeupdate="//oneDurSet()" onended="//oneReSet()">
 </audio>
 <audio controls loop id="two-audio" preload="metadata" src='./assets/sounds/indie.flac'
     onloadedmetadata="//twoMaxDurSet()" ontimeupdate="//twoDurSet()" onended="//twoSound.soundReSet()">
 </audio>
-<audio controls loop id="three-audio" preload="metadata" src='./assets/sounds/haha.flac'
+<audio controls loop id="three-audio" preload="metadata" src='./assets/sounds/nature.flac'
     onloadedmetadata="//threeMaxDurSet()" ontimeupdate="//threeDurSet()" onended="//threeSound.soundReSet()">
 </audio>
-<audio controls loop id="four-audio" preload="metadata" src='./assets/sounds/haha.flac'
+<audio controls loop id="four-audio" preload="metadata" src='./assets/sounds/nature.flac'
     onloadedmetadata="//fourMaxDurSet()" ontimeupdate="//fourDurSet()" onended="//fourSound.soundReSet()">
 </audio>
 <br>

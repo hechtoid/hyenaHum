@@ -1,16 +1,14 @@
-AudioContext = window.AudioContext || window.webkitAudioContext;
 
-context = new AudioContext
 
 window.addEventListener('DOMContentLoaded', (event) => {
     brownNoise = context.createBrownNoise();
     pinkNoise = context.createPinkNoise();
     whiteNoise = context.createWhiteNoise();
-    gainNode = context.createGain();
+    noiseGainNode = context.createGain();
     
-    volumeControl = document.querySelector('#volume');
-    volumeControl.addEventListener('input', function () {
-        gainNode.gain.value = this.value;
+    noiseVolumeControl = document.querySelector('#noiseVolume');
+    noiseVolumeControl.addEventListener('input', function () {
+        noiseGainNode.gain.value = this.value;
     }, false);
 });
 
@@ -21,13 +19,13 @@ function noiseSelect(noiseColor) {
             // volumeControl.value = 0.3
             whiteGain = context.createGain()
             whiteGain.gain.value = 0.3;
-            whiteNoise.connect(whiteGain).connect(gainNode).connect(context.destination);
+            whiteNoise.connect(whiteGain).connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
             break;
         case 'pink':
-            pinkNoise.connect(gainNode).connect(context.destination);
+            pinkNoise.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
             break;
         case 'brown':
-            brownNoise.connect(gainNode).connect(context.destination);
+            brownNoise.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
             break;
         case 'custom':
             oneSound.alertUpload();
@@ -37,18 +35,18 @@ function noiseSelect(noiseColor) {
 
 
 function makeWaves() {
-    brownNoise = context.createBrownNoise();
+    // brownNoise = context.createBrownNoise();
     var brownGain = context.createGain();
-    brownGain.gain.value = 0.3;
+    brownGain.gain.value = 0.9;
     brownNoise.connect(brownGain);
     
     var lfo = context.createOscillator();
     lfo.frequency.value = 0.3;
     var lfoGain = context.createGain();
-    lfoGain.gain.value = 0.2;
+    lfoGain.gain.value = 0.7;
     
     lfo.start(0);
     lfo.connect(lfoGain);
     lfoGain.connect(brownGain.gain);
-    brownGain.connect(context.destination);
+    brownGain.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
 }

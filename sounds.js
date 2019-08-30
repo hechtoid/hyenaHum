@@ -10,6 +10,7 @@ let Sound = class {
         let soundSelector = document.getElementById(`${soundNumber}-selector`);
         let soundPlayButton = document.getElementById(`${soundNumber}-play`);
         let soundPauseButton = document.getElementById(`${soundNumber}-pause`);
+     
         this.soundAudio = soundAudio
         this.soundDiv = soundDiv
         this.soundVol = soundVol
@@ -17,7 +18,16 @@ let Sound = class {
         this.soundPlayButton = soundPlayButton
         this.soundPauseButton = soundPauseButton
 
+        let sounds = { 
+            piano: './assets/sounds/piano.flac',
+            nature: './assets/sounds/nature.flac',
+            indie: './assets/sounds/indie.flac'
+        }
+        this.sounds = sounds
 
+        window[`track${soundNumber}`] = context.createMediaElementSource(soundAudio)
+        window[`track${soundNumber}`].connect(masterGainNode).connect(context.destination)
+        
         //TESTING ONLY
         this.soundAudio.volume = 0.9
 
@@ -60,14 +70,15 @@ let Sound = class {
         this.soundDiv.classList.remove("playing");
         this.soundPauseButton.classList.add("inactive");
         this.soundPlayButton.classList.remove("inactive");
-        this.soundSelector.value = './assets/sounds/haha.flac';
+        this.soundSelector.value = './assets/sounds/nature.flac';
         setTimeout(function () { that.soundPlay() }, 3000)
     }
+   
     soundSelect() {
         if (this.soundSelector.value === "none") {
             this.alertUpload();
         } else {
-            this.soundAudio.src = this.soundSelector.value;
+            this.soundAudio.src = this.sounds[this.soundSelector.value];
             this.soundPlay();
         }
     }
