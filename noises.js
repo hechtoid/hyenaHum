@@ -11,33 +11,60 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 // context=window.context
 // gainNode=window.gainNode
 // whiteNoise=window.whiteNoise
+context = new AudioContext
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    brownNoise = context.createBrownNoise();
+    pinkNoise = context.createPinkNoise();
+    whiteNoise = context.createWhiteNoise();
+    gainNode = context.createGain();
+    
+    volumeControl = document.querySelector('#volume');
+    volumeControl.addEventListener('input', function () {
+        gainNode.gain.value = this.value;
+    }, false);
+});
+
 
 
 function noiseSelect() {
-    var context = new AudioContext
-    var whiteNoise = context.createWhiteNoise();
-    var pinkNoise = context.createPinkNoise();
-    var brownNoise = context.createBrownNoise();
+
     switch (noiseSelector.value) {
-        case 'none':
-            context.close()
-            break;
         case 'white':
-            whiteNoise.connect(context.destination);
+            // volumeControl.value = 0.3
+            gainNode.gain.value = 0.3;
+            whiteNoise.connect(gainNode).connect(context.destination);
             break;
         case 'pink':
-            pinkNoise.connect(context.destination);
+            pinkNoise.connect(gainNode).connect(context.destination);
             break;
         case 'brown':
-            brownNoise.connect(context.destination);
+            brownNoise.connect(gainNode).connect(context.destination);
             break;
         case 'custom':
             oneSound.alertUpload();
             break;
-        default:
-            context.suspend();
     }
 }
+
+
+function makeWaves() {
+    brownNoise = context.createBrownNoise();
+    var brownGain = context.createGain();
+    brownGain.gain.value = 0.5;
+    brownNoise.connect(brownGain);
+    
+    var lfo = context.createOscillator();
+    lfo.frequency.value = 0.4;
+    var lfoGain = context.createGain();
+    lfoGain.gain.value = 0.5;
+    
+    lfo.start(0);
+    lfo.connect(lfoGain);
+    lfoGain.connect(brownGain.gain);
+    brownGain.connect(context.destination);
+}
+
 
 
 // var AudioContext = window.AudioContext || window.webkitAudioContext;

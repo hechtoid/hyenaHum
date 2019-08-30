@@ -2,6 +2,9 @@ body{
     background: #555555;
     font-family: sans-serif;
 }
+button{
+    margin-top: 15px;
+}
 .sound{
     background: #702020;
     border: 5px solid white;
