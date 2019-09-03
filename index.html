@@ -176,23 +176,23 @@
     <td>  
     <label class="volume">noise control: <i class="fas fa-volume-up"></i>
     
-    <input type="range" id="noiseVolume" min="0" max="2" value="1" step="0.01">
+    <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
     </td><td>
     <div class="selector">
         <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
-            <option selected onclick="stopAllSoundsAndNoises()" value='none'>
+            <option selected onclick="noiseSelect()" value='none'>
                 none
             </option>
-            <option onclick="noiseSelect('brown')" value='brown'>
+            <option onclick="noiseSelect()" value='brown'>
                 brown (soothing sound)
             </option>
-            <option onclick="noiseSelect('pink')" value='pink'>
+            <option onclick="noiseSelect()" value='pink'>
                 pink (soft static)
             </option>
-            <option onclick="noiseSelect('white')" value='white'>
+            <option onclick="noiseSelect()" value='white'>
                 white (harsh noise)
             </option>
-            <option onclick="//noiseSelect()" value='custom'>
+            <option onclick="noiseSelect()" value='custom'>
                 custom
             </option>
         </select>

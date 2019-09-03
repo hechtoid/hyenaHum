@@ -5,16 +5,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     pinkNoise = context.createPinkNoise();
     whiteNoise = context.createWhiteNoise();
     noiseGainNode = context.createGain();
-    
-    noiseVolumeControl = document.querySelector('#noiseVolume');
+    noiseVolumeControl = document.getElementById('noise-volume');
     noiseVolumeControl.addEventListener('input', function () {
         noiseGainNode.gain.value = this.value;
     }, false);
+    noiseSelector = document.getElementById('noise-selector')
 });
 
-function noiseSelect(noiseColor) {
+function noiseSelect() {
 
-    switch (noiseColor) {
+    switch (noiseSelector.value) {
         case 'white':
             // volumeControl.value = 0.3
             whiteGain = context.createGain()
@@ -26,6 +26,11 @@ function noiseSelect(noiseColor) {
             break;
         case 'brown':
             brownNoise.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
+            break;
+        case 'none':
+            pinkNoise.disconnect()
+            brownNoise.disconnect()
+            whiteNoise.disconnect()
             break;
         case 'custom':
             oneSound.alertUpload();
