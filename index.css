@@ -1,6 +1,7 @@
 body{
     background: #555555;
     font-family: sans-serif;
+    /* text-align: center; */
 }
 button{
     margin-top: 15px;
@@ -116,7 +117,8 @@ label.volume{
     position: relative;
     top: -15px;
     color: white;
-    /* margin-left: 50px; */
+    margin-left: 50px;
+    margin-top: 15px;
     /* margin-bottom: 10px; */
 }
 .seek{
@@ -154,4 +156,5 @@ label.volume{
 }
 .noise-selector{
     margin-top: 15px;
+    width: 300px;
 }

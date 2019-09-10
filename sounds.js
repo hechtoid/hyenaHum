@@ -19,16 +19,15 @@ let Sound = class {
         this.soundPauseButton = soundPauseButton
 
         let sounds = { 
-            piano: './assets/sounds/piano.flac',
-            nature: './assets/sounds/nature.flac',
-            indie: './assets/sounds/indie.flac'
+            piano: './assets/sounds/piano.mp3',
+            nature: './assets/sounds/nature.mp3',
+            indie: './assets/sounds/indie.mp3'
         }
         this.sounds = sounds
 
         window[`track${soundNumber}`] = context.createMediaElementSource(soundAudio)
         window[`track${soundNumber}`].connect(masterGainNode).connect(context.destination)
         
-        //TESTING ONLY
         this.soundAudio.volume = 0.9
 
     }
@@ -70,7 +69,7 @@ let Sound = class {
         this.soundDiv.classList.remove("playing");
         this.soundPauseButton.classList.add("inactive");
         this.soundPlayButton.classList.remove("inactive");
-        this.soundSelector.value = './assets/sounds/nature.flac';
+        this.soundSelector.value = './assets/sounds/nature.mp3';
         setTimeout(function () { that.soundPlay() }, 3000)
     }
    

@@ -13,7 +13,7 @@ function stopAllSoundsAndNoises() {
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    masterVolumeControl = document.querySelector('#masterVolume');
+    masterVolumeControl = document.getElementById('master-volume');
     masterVolumeControl.addEventListener('input', function () {
         masterGainNode.gain.value = this.value;
     }, false);
