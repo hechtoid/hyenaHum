@@ -121,6 +121,7 @@ label.volume{
     color: white;
     margin-left: 50px;
     margin-top: 25px;
+    font-weight: 700;
     /* margin-bottom: 10px; */
 }
 .masterVolume{
@@ -130,6 +131,10 @@ label.volume{
     margin-left: 250px;
     margin-top: -25px;
     /* margin-bottom: 10px; */
+    font-weight: 700;
+}
+#master-volume{
+    width: 300px;
 }
 .seek{
     width: 80%;
@@ -200,6 +205,7 @@ label.volume{
     /* margin-left: 50px; */
     margin-top: 50px;
     /* margin-bottom: 10px; */
+    font-weight: 700;
 }
 .colour{
     font-weight: 700;
