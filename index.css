@@ -1,7 +1,9 @@
 body{
-    background: #555555;
     font-family: sans-serif;
     /* text-align: center; */
+    background-image: url("original.jpg");
+     background-repeat: no-repeat;
+  background-size: 100vw 100%;
 }
 button{
     margin-top: 15px;
@@ -11,7 +13,7 @@ button{
     background: #702020;
     border: 5px solid white;
     border-radius: 10px;
-    width: 75vw;
+    width: 500px;
     height: 100px;
     margin: 25px auto;
     margin-top: 10px;
@@ -118,7 +120,15 @@ label.volume{
     top: -15px;
     color: white;
     margin-left: 50px;
-    margin-top: 15px;
+    margin-top: 25px;
+    /* margin-bottom: 10px; */
+}
+.masterVolume{
+    position: relative;
+    top: -50px;
+    color: white;
+    margin-left: 250px;
+    margin-top: -25px;
     /* margin-bottom: 10px; */
 }
 .seek{
@@ -128,6 +138,7 @@ label.volume{
 .selector{
     display: inline-block;
     width: 100%;
+    margin-top: 10px;
 }
 .sound-selector{
     width: 75%;
@@ -144,9 +155,13 @@ label.volume{
     font-weight: 900;
     padding: 10px;
     padding-top: 15px;
-    margin-left: 15px;
+    margin-left: 25px;
     opacity: 0.8;
     text-align: center;
+    display:inline-block;
+    position: relative;
+    top: -120px;
+    left: 800px;
 }
 .stopAll:hover{
     cursor: pointer;
@@ -155,6 +170,46 @@ label.volume{
     transition: 0.2s;
 }
 .noise-selector{
-    margin-top: 15px;
+    /* margin-top: -1400px; */
     width: 300px;
+    /* margin-left: 50px; */
+}
+.make-waves{
+    margin-top: 25px;
+}
+.sounds{
+    position: relative;
+    top: -150px;
+    left: -200px;
+}
+.mix{
+    font-weight: 700;
+    position: relative;
+    top: -25px;
+}
+.noises{
+    position: relative;
+    top: -500px;
+    left: 700px;
+}
+.noiseVolume{
+    position: relative;
+    top: 15px;
+    /* left: 500px; */
+    color: white;
+    /* margin-left: 50px; */
+    margin-top: 50px;
+    /* margin-bottom: 10px; */
+}
+.colour{
+    font-weight: 700;
+}
+.master{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    width: 75vw;
+    margin: 15px auto;
+    background: #555555;
+
 }

@@ -12,220 +12,198 @@
     <title>hyenaHum - your Noises Looped</title>
 </head>
 
-<body>    
-    <br>  
-    <table>
-        <tr><label class="volume">master volume control: <i class="fas fa-volume-up"></i>
-            <input type="range" id="master-volume" min="0" max="2" value="1" step="0.01">
-        </label></tr>
-        <tr>
-        <td>
-            
-        </td>
-        </tr>
-        <tr>
-        <td>
+<body>
+<div class="master">
+    <br>
+    <h2>
             <b>hyenaHum - </b>
-                <br>
-            To mix the soothing sounds of nature with noises we create
-                <br>
-            There are many apps for playing music, this one is for layering loops
-        </td>
-        <td>
-          
-        </td>
-    </tr>
-    <tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+    </h2>
+    <label class="masterVolume">master volume <i class="fas fa-volume-up"></i>
+        <input type="range" id="master-volume" min="0" max="2" value="1" step="0.01">
+    </label>
+    <div class="mix">
+        To mix the soothing sounds of nature with noises we create
         <br>
-        <td>
-            <label class="volume">noise volume control: <i class="fas fa-volume-up"></i>
-    
-                <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
-        </td>
-    </tr>
-        <tr>
-                <th>Select a Colour of Noise, or Click the Button to Play the PreSet:</th>
-            <tr></tr><td>
-                <button onclick="makeWaves()">make waves</button>
-            <!-- </td>
-            <td> -->
-                <div class="selector">
-                    <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
-                        <option selected onclick="noiseSelect()" value='none'>
-                            none
-                        </option>
-                        <option onclick="noiseSelect()" value='brown'>
-                            brown (soothing sound)
-                        </option>
-                        <option onclick="noiseSelect()" value='pink'>
-                            pink (soft static)
-                        </option>
-                        <option onclick="noiseSelect()" value='white'>
-                            white (harsh noise)
-                        </option>
-                        <option onclick="noiseSelect()" value='custom'>
-                            custom
-                        </option>
-                    </select>
+        There are many apps for playing music, this one is for layering loops
+    </div>
+        <div class="stopAll" onclick="stopAllSoundsAndNoises()">
+                STOP ALL SOUNDS & NOISES
+        </div>
+        <br>
+        
+        <div class="sounds">
+            <div class="sound" id="one-div">
+                <div class="controls" onclick="oneSound.soundToggle()">
+                    <div class="play control" id="one-play">
+                        ▶
+                    </div>
+                    <div class="pause control inactive" id="one-pause">
+                        ⏸
+                    </div>
                 </div>
-            </td>
-          
-            </tr>
-            <th>Then select a track or four to layer on top!</th>
-    </table>
-    <br>
-  
-<div class="sound" id="one-div">
-    <div 
-    class="controls"
-    onclick="oneSound.soundToggle()">
-        <div class="play control" id="one-play">
-            ▶
-        </div>
-        <div class="pause control inactive" id="one-pause">
-            ⏸
-        </div>
-    </div>
-    <div class="sliders">
-    <!--<label> seeker: 
-            <input type="range" class="seek slider" id="one-seek" min="0" step="0.1" value="0" onchange="oneSeekSet()"> 
-        </label>-->
-        <label class="volume">track control: <i class="fas fa-volume-up"></i> 
-            <input type="range" class="volume slider" id="one-vol" min="0" max="1" value="0.9" step="0.01" onchange="oneSound.soundVolumeSet()" > 
-        </label>
-            <br>
-        <div class="selector">
-            <select class="sound-selector" id="one-selector" onchange="oneSound.soundSelect()">
-                <option selected onclick="oneSound.soundSelect()"  value='nature'>
-                nature
-                </option>
-                <option onclick="oneSound.soundSelect()" value='indie'>
-                indie
-                </option>
-                <option onclick="oneSound.soundSelect()" value='piano'>
-                    piano
-                </option>
-                <option onclick="//alertUpload()" value='none'>
-                User Upload
-                </option>
-            </select>
+                <div class="sliders">
+                    <!--<label> seeker:
+                <input type="range" class="seek slider" id="one-seek" min="0" step="0.1" value="0" onchange="oneSeekSet()">
+            </label>-->
+                    <label class="volume">track volume <i class="fas fa-volume-up"></i>
+                        <input type="range" class="volume slider" id="one-vol" min="0" max="1" value="0.9" step="0.01"
+                            onchange="oneSound.soundVolumeSet()">
+                    </label>
+                    <br>
+                    <div class="selector">
+                        <select class="sound-selector" id="one-selector" onchange="oneSound.soundSelect()">
+                            <option selected onclick="oneSound.soundSelect()" value='nature'>
+                                nature
+                            </option>
+                            <option onclick="oneSound.soundSelect()" value='indie'>
+                                indie
+                            </option>
+                            <option onclick="oneSound.soundSelect()" value='piano'>
+                                piano
+                            </option>
+                            <option onclick="//alertUpload()" value='none'>
+                                User Upload
+                            </option>
+                        </select>
+                    </div>
+                </div>
             </div>
-    </div>
+            <!-- DIV TWO -->
+            <div class="sound" id="two-div">
+                <div class="controls" onclick="twoSound.soundToggle()">
+                    <div class="play control" id="two-play">
+                        ▶
+                    </div>
+                    <div class="pause control inactive" id="two-pause">
+                        ⏸
+                    </div>
+                </div>
+                <div class="sliders">
+                    <label class="volume">track volume <i class="fas fa-volume-up"></i>
+                        <input type="range" class="volume slider" id="two-vol" min="0" max="1" value="0.9" step="0.01"
+                            onchange="twoSound.soundVolumeSet()">
+                    </label>
+                    <br>
+                    <div class="selector">
+                        <select class="sound-selector" id="two-selector" onchange="twoSound.soundSelect()">
+                            <option onclick="twoSound.soundSelect()" value='nature'>
+                                nature
+                            </option>
+                            <option selected onclick="twoSound.soundSelect()" value='indie'>
+                                indie
+                            </option>
+                            <option onclick="twoSound.soundSelect()" value='piano'>
+                                piano
+                            </option>
+                            <option onclick="//alertUpload()" value='none'>
+                                User Upload
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- DIV THREE -->
+            <div class="sound" id="three-div">
+                <div class="controls" onclick="threeSound.soundToggle()">
+                    <div class="play control" id="three-play">
+                        ▶
+                    </div>
+                    <div class="pause control inactive" id="three-pause">
+                        ⏸
+                    </div>
+                </div>
+                <div class="sliders">
+                    <label class="volume">track volume <i class="fas fa-volume-up"></i>
+                        <input type="range" class="volume slider" id="three-vol" min="0" max="1" value="0.9" step="0.01"
+                            onchange="threeSound.soundVolumeSet()">
+                    </label>
+                    <br>
+                    <div class="selector">
+                        <select class="sound-selector" id="three-selector" onchange="threeSound.soundSelect()">
+                            <option selected onclick="threeSound.soundSelect()" value='nature'>
+                                nature
+                            </option>
+                            <option onclick="threeSound.soundSelect()" value='indie'>
+                                indie
+                            </option>
+                            <option onclick="threeSound.soundSelect()" value='piano'>
+                                piano
+                            </option>
+                            <option onclick="//alertUpload()" value='none'>
+                                User Upload
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- DIV FOUR -->
+            <div class="sound" id="four-div">
+                <div class="controls" onclick="fourSound.soundToggle()">
+                    <div class="play control" id="four-play">
+                        ▶
+                    </div>
+                    <div class="pause control inactive" id="four-pause">
+                        ⏸
+                    </div>
+                </div>
+                <div class="sliders">
+                    <label class="volume">track volume <i class="fas fa-volume-up"></i>
+                        <input type="range" class="volume slider" id="four-vol" min="0" max="1" value="0.9" step="0.01"
+                            onchange="fourSound.soundVolumeSet()">
+                    </label>
+                    <br>
+                    <div class="selector">
+                        <select class="sound-selector" id="four-selector" onchange="fourSound.soundSelect()">
+                            <option selected onclick="fourSound.soundSelect()" value='nature'>
+                                nature
+                            </option>
+                            <option onclick="fourSound.soundSelect()" value='indie'>
+                                indie
+                            </option>
+                            <option onclick="fourSound.soundSelect()" value='piano'>
+                                piano
+                            </option>
+                            <option onclick="//alertUpload()" value='none'>
+                                User Upload
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<div class="noises">            
+        <span class="colour">Select a Colour, or make waves:</span>
+              
+<div class="selector">
+    <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
+        <option selected onclick="noiseSelect()" value='none'>
+            none
+        </option>
+        <option onclick="noiseSelect()" value='brown'>
+            brown (soothing sound)
+        </option>
+        <option onclick="noiseSelect()" value='pink'>
+            pink (soft static)
+        </option>
+        <option onclick="noiseSelect()" value='white'>
+            white (harsh noise)
+        </option>
+        <option onclick="//noiseSelect()" value='custom'>
+            custom
+        </option>
+    </select>
 </div>
-<!-- DIV TWO -->
-<div class="sound" id="two-div">
-        <div class="controls" onclick="twoSound.soundToggle()">
-            <div class="play control" id="two-play">
-                ▶
-            </div>
-            <div class="pause control inactive" id="two-pause">
-                ⏸
-            </div>
-        </div>
-        <div class="sliders">
-        <label class="volume">track control: <i class="fas fa-volume-up"></i>
-                <input type="range" class="volume slider" id="two-vol" min="0" max="1" value="0.9" step="0.01"
-                    onchange="twoSound.soundVolumeSet()">
-            </label>
-            <br>
-            <div class="selector">
-                <select class="sound-selector" id="two-selector" onchange="twoSound.soundSelect()">
-                    <option onclick="twoSound.soundSelect()" value='nature'>
-                        nature
-                    </option>
-                    <option selected onclick="twoSound.soundSelect()" value='indie'>
-                        indie
-                    </option>
-                    <option onclick="twoSound.soundSelect()" value='piano'>
-                        piano
-                    </option>
-                    <option onclick="//alertUpload()" value='none'>
-                        User Upload
-                    </option>
-                </select>
-            </div>
-        </div>
-    </div>
-<!-- DIV THREE -->
-<div class="sound" id="three-div">
-    <div class="controls" onclick="threeSound.soundToggle()">
-        <div class="play control" id="three-play">
-            ▶
-        </div>
-        <div class="pause control inactive" id="three-pause">
-            ⏸
-        </div>
-    </div>
-    <div class="sliders">
-        <label class="volume">track control: <i class="fas fa-volume-up"></i>
-            <input type="range" class="volume slider" id="three-vol" min="0" max="1" value="0.9" step="0.01"
-                onchange="threeSound.soundVolumeSet()">
+        <label class="noiseVolume">noise volume <i class="fas fa-volume-up"></i>
+            <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
         </label>
         <br>
-        <div class="selector">
-            <select class="sound-selector" id="three-selector" onchange="threeSound.soundSelect()">
-                <option selected onclick="threeSound.soundSelect()" value='nature'>
-                    nature
-                </option>
-                <option onclick="threeSound.soundSelect()" value='indie'>
-                    indie
-                </option>
-                <option onclick="threeSound.soundSelect()" value='piano'>
-                    piano
-                </option>
-                <option onclick="//alertUpload()" value='none'>
-                    User Upload
-                </option>
-            </select>
-        </div>
-    </div>
+        <button class="make-waves" onclick="makeWaves()">make waves</button>
 </div>
-<!-- DIV FOUR -->
-<div class="sound" id="four-div">
-    <div class="controls" onclick="fourSound.soundToggle()">
-        <div class="play control" id="four-play">
-            ▶
-        </div>
-        <div class="pause control inactive" id="four-pause">
-            ⏸
-        </div>
-    </div>
-    <div class="sliders">
-        <label class="volume">track control: <i class="fas fa-volume-up"></i>
-            <input type="range" class="volume slider" id="four-vol" min="0" max="1" value="0.9" step="0.01"
-                onchange="fourSound.soundVolumeSet()">
-        </label>
-        <br>
-        <div class="selector">
-            <select class="sound-selector" id="four-selector" onchange="fourSound.soundSelect()">
-                <option selected onclick="fourSound.soundSelect()" value='nature'>
-                    nature
-                </option>
-                <option onclick="fourSound.soundSelect()" value='indie'>
-                    indie
-                </option>
-                <option onclick="fourSound.soundSelect()" value='piano'>
-                    piano
-                </option>
-                <option onclick="//alertUpload()" value='none'>
-                    User Upload
-                </option>
-            </select>
-        </div>
-    </div>
+
 </div>
-    <br>
-    <br>
-    <br>
-   
-    <div class="stopAll" onclick="stopAllSoundsAndNoises()">
-        STOP ALL SOUNDS & NOISES
-    </div>
- 
-    <br>
+
+
 <audio loop id="one-audio" preload="metadata" src='./assets/sounds/nature.mp3'
     onloadedmetadata="//oneMaxDurSet()" ontimeupdate="//oneDurSet()" onended="//oneReSet()">
 </audio>
@@ -238,15 +216,6 @@
 <audio loop id="four-audio" preload="metadata" src='./assets/sounds/nature.mp3'
     onloadedmetadata="//fourMaxDurSet()" ontimeupdate="//fourDurSet()" onended="//fourSound.soundReSet()">
 </audio>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
 
 <script type="text/javascript" src="./index.js"></script>
 <script type="text/javascript" src='./noises.js'></script>

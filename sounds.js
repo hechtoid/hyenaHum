@@ -64,7 +64,7 @@ let Sound = class {
     }
     alertUpload() {
         let that = this
-        alert("Coming Soon!!");
+        alert("Coming Soon!");
         this.soundAudio.pause();
         this.soundDiv.classList.remove("playing");
         this.soundPauseButton.classList.add("inactive");
