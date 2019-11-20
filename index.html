@@ -18,13 +18,13 @@
     <h2>
             <b>hyenaHum - </b>
     </h2>
-    <label class="masterVolume">master volume <i class="fas fa-volume-up"></i>
-        <input type="range" id="master-volume" min="0" max="2" value="1" step="0.01">
+    <label class="master-volume">master volume <i class="fas fa-volume-up"></i>
+        <input type="range" class="master-volume" id="master-volume" min="0" max="2" value="1" step="0.01">
     </label>
     <div class="mix">
-        To mix the soothing sounds of nature with noises we create
+        Mix the soothing sounds of nature with custom generated noise
         <br>
-        There are many apps for playing music, this one is for layering loops
+        There are many sites for playing music, this one is for layering loops
     </div>
         <div class="stopAll" onclick="stopAllSoundsAndNoises()">
                 STOP ALL SOUNDS & NOISES
@@ -172,8 +172,11 @@
             </div>
         </div>
     
-<div class="noises">            
-        <span class="colour">Select a Colour, or make waves:</span>
+<div class="noises">   
+    <div class="colour">Select a Colour, or make waves:</div>
+    <label class="noiseVolume">noise volume <i class="fas fa-volume-up"></i>
+        <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
+    </label>
               
 <div class="selector">
     <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
@@ -194,9 +197,7 @@
         </option>
     </select>
 </div>
-        <label class="noiseVolume">noise volume <i class="fas fa-volume-up"></i>
-            <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
-        </label>
+        
         <br>
         <button class="make-waves" onclick="makeWaves()">make waves</button>
 </div>
