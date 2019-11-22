@@ -14,23 +14,60 @@
 
 <body>
 <div class="master">
-    <br>
+    <div class="top-div">
     <h2>
-            <b>hyenaHum - </b>
+        <b>hyenaHum - </b>
     </h2>
+    <br>
     <label class="master-volume">master volume <i class="fas fa-volume-up"></i>
         <input type="range" class="master-volume" id="master-volume" min="0" max="2" value="1" step="0.01">
     </label>
     <div class="mix">
+        <br>
         Mix the soothing sounds of nature with custom generated noise
         <br>
         There are many sites for playing music, this one is for layering loops
     </div>
+    <br>
+    <br>
         <div class="stopAll" onclick="stopAllSoundsAndNoises()">
                 STOP ALL SOUNDS & NOISES
         </div>
+
+    <div class="noises">
         <br>
-        
+        <br>
+        <div class="colour">Select a Colour, or make waves:</div>
+        <br>
+        <label class="noiseVolume">noise volume <i class="fas fa-volume-up"></i>
+            <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
+        </label>
+    
+        <div class="selector">
+            <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
+                <option selected onclick="noiseSelect()" value='none'>
+                    none
+                </option>
+                <option onclick="noiseSelect()" value='brown'>
+                    brown (soothing sound)
+                </option>
+                <option onclick="noiseSelect()" value='pink'>
+                    pink (soft static)
+                </option>
+                <option onclick="noiseSelect()" value='white'>
+                    white (harsh noise)
+                </option>
+                <option onclick="//noiseSelect()" value='custom'>
+                    custom
+                </option>
+            </select>
+        </div>
+    
+        <br>
+        <button class="make-waves" onclick="makeWaves()">make waves</button>
+        </div>
+    </div>
+    <div class="middle-div">        
         <div class="sounds">
             <div class="sound" id="one-div">
                 <div class="controls" onclick="oneSound.soundToggle()">
@@ -172,36 +209,8 @@
             </div>
         </div>
     
-<div class="noises">   
-    <div class="colour">Select a Colour, or make waves:</div>
-    <label class="noiseVolume">noise volume <i class="fas fa-volume-up"></i>
-        <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
-    </label>
-              
-<div class="selector">
-    <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
-        <option selected onclick="noiseSelect()" value='none'>
-            none
-        </option>
-        <option onclick="noiseSelect()" value='brown'>
-            brown (soothing sound)
-        </option>
-        <option onclick="noiseSelect()" value='pink'>
-            pink (soft static)
-        </option>
-        <option onclick="noiseSelect()" value='white'>
-            white (harsh noise)
-        </option>
-        <option onclick="//noiseSelect()" value='custom'>
-            custom
-        </option>
-    </select>
-</div>
-        
-        <br>
-        <button class="make-waves" onclick="makeWaves()">make waves</button>
-</div>
 
+</div>
 </div>
 
 

@@ -8,6 +8,9 @@ body{
 button{
     margin-top: 15px;
 }
+select{
+    /* border-radius: 3px; */
+}
 
 .master{
     display: flex;
@@ -17,6 +20,7 @@ button{
     width: 75vw;
     margin: 15px auto;
     background: #555555;
+    min-height: 100vh;
 }
 
 
