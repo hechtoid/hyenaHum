@@ -14,60 +14,62 @@
 
 <body>
 <div class="master">
-    <div class="top-div">
-    <h2>
-        <b>hyenaHum - </b>
-    </h2>
-    <br>
-    <label class="master-volume">master volume <i class="fas fa-volume-up"></i>
-        <input type="range" class="master-volume" id="master-volume" min="0" max="2" value="1" step="0.01">
-    </label>
-    <div class="mix">
-        <br>
-        Mix the soothing sounds of nature with custom generated noise
-        <br>
-        There are many sites for playing music, this one is for layering loops
-    </div>
-    <br>
-    <br>
-        <div class="stop-all" onclick="stopAllSoundsAndNoises()">
-                STOP ALL SOUNDS & NOISES
+    <div class="left-div">
+    <div class="title-div">
+    <div class="left-title">
+
+        <h2>
+            <b>hyenaHum</b>
+        </h2>
+        <div class="mix">
+                Mix the sweet sounds of nature
+                <br>
+                with soothing generated noise
         </div>
+    </div>
+    <div class="stop-all" onclick="stopAllSoundsAndNoises()">
+        STOP ALL SOUNDS & NOISES
+    </div>
+    </div>
+
+    <label class="master-volume">master volume <i class="fas fa-volume-up"></i>
+        <input type="range" class="volume" id="master-volume" min="0" max="2" value="1" step="0.01">
+    </label>
 
     <div class="noises">
-        <br>
-        <br>
-        <!-- <div class="colour">Select a Colour, or make waves:</div> -->
-        <br>
+    
+    <div class="colour">Select a Colour, or hear the sea:</div>
+    <div class="top-noises">
+    <div class="make-waves" onclick="makeWaves()">make waves</div>
+
+    <div class="selector">
+        <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
+            <option selected onclick="noiseSelect()" value='none'>
+                Colours of Noise
+            </option>
+            <option onclick="noiseSelect()" value='brown'>
+                brown (soothing sound)
+            </option>
+            <option onclick="noiseSelect()" value='pink'>
+                pink (soft static)
+            </option>
+            <option onclick="noiseSelect()" value='white'>
+                white (harsh noise)
+            </option>
+            <option onclick="//noiseSelect()" value='custom'>
+                custom
+            </option>
+        </select>
+    </div>
+    </div>
         <label class="noise-volume">noise volume <i class="fas fa-volume-up"></i>
-            <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
+            <input type="range" class="volume" id="noise-volume" min="0" max="2" value="1" step="0.01">
         </label>
     
-        <div class="selector">
-            <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
-                <option selected onclick="noiseSelect()" value='none'>
-                    Colours of Noise
-                </option>
-                <option onclick="noiseSelect()" value='brown'>
-                    brown (soothing sound)
-                </option>
-                <option onclick="noiseSelect()" value='pink'>
-                    pink (soft static)
-                </option>
-                <option onclick="noiseSelect()" value='white'>
-                    white (harsh noise)
-                </option>
-                <option onclick="//noiseSelect()" value='custom'>
-                    custom
-                </option>
-            </select>
-        </div>
     
-        <br>
-        <div class="make-waves" onclick="makeWaves()">make waves</div>
-        </div>
     </div>
-    <div class="middle-div">        
+    </div>
+    <div class="right-div">        
         <div class="sounds">
             <div class="sound" id="one-div">
                 <div class="controls" onclick="oneSound.soundToggle()">
@@ -83,7 +85,7 @@
                 <input type="range" class="seek slider" id="one-seek" min="0" step="0.1" value="0" onchange="oneSeekSet()">
             </label>-->
                     <label class="volume">track volume <i class="fas fa-volume-up"></i>
-                        <input type="range" class="volume slider" id="one-vol" min="0" max="1" value="0.9" step="0.01"
+                        <input type="range" class="sound-volume" id="one-vol" min="0" max="1" value="0.9" step="0.01"
                             onchange="oneSound.soundVolumeSet()">
                     </label>
                     <br>
@@ -117,7 +119,7 @@
                 </div>
                 <div class="sliders">
                     <label class="volume">track volume <i class="fas fa-volume-up"></i>
-                        <input type="range" class="volume slider" id="two-vol" min="0" max="1" value="0.9" step="0.01"
+                        <input type="range" class="sound-volume" id="two-vol" min="0" max="1" value="0.9" step="0.01"
                             onchange="twoSound.soundVolumeSet()">
                     </label>
                     <br>
@@ -151,7 +153,7 @@
                 </div>
                 <div class="sliders">
                     <label class="volume">track volume <i class="fas fa-volume-up"></i>
-                        <input type="range" class="volume slider" id="three-vol" min="0" max="1" value="0.9" step="0.01"
+                        <input type="range" class="sound-volume" id="three-vol" min="0" max="1" value="0.9" step="0.01"
                             onchange="threeSound.soundVolumeSet()">
                     </label>
                     <br>
@@ -185,7 +187,7 @@
                 </div>
                 <div class="sliders">
                     <label class="volume">track volume <i class="fas fa-volume-up"></i>
-                        <input type="range" class="volume slider" id="four-vol" min="0" max="1" value="0.9" step="0.01"
+                        <input type="range" class="sound-volume" id="four-vol" min="0" max="1" value="0.9" step="0.01"
                             onchange="fourSound.soundVolumeSet()">
                     </label>
                     <br>

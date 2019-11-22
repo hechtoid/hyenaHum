@@ -4,6 +4,7 @@ body{
     background-image: url("original.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 100%;
+    min-height: 100vh;
 }
 button{
     margin-top: 15px;
@@ -17,12 +18,18 @@ select{
     border: 1px solid black;
     border-radius: 15px;
     padding: 25px;
-    width: 75vw;
+    width: 80vw;
     margin: 15px auto;
     background: #555555;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
+.title-div{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-bottom: 25px;
+}
 
 label.volume{
     position: relative;
@@ -39,9 +46,12 @@ label.master-volume{
     /* margin-top: -25px; */
     /* margin-bottom: 10px; */
     font-weight: 700;
+     
 }
-input.master-volume{
+input.volume{
     width: 300px;
+    position: relative;
+    top: 4px;
 }
 
 .mix{
@@ -76,23 +86,30 @@ input.master-volume{
 }
 .sounds{
     display:inline-block;
+    margin-top: 15px;
 }
 .noises{
     display:inline-block;
-
+    margin-top: 40px;
 }
-
+.top-noises{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .stop-all{
     background: black;
     color: white;
     border: 5px solid #702020;
     border-radius: 10px;
+    min-width: 100px;
     width: 100px;
     height: 100px;
     font-weight: 900;
     padding: 10px;
     padding-top: 15px;
-    margin-left: 25px auto;
+    margin-left: 50px;
+    margin-top: 25px;
     opacity: 0.8;
     transition: 0.2s;
     text-align: center;
@@ -202,11 +219,11 @@ input.master-volume{
 .slider:hover{
     cursor: pointer;
 }
-.slider{
+.sound-volume{
     margin: 5px;
     /* padding1-left: 50px; */
     position: relative;
-    top: 9px;
+    top: 7px;
     width: 25%;
     margin-left: 15px;
 }
@@ -226,14 +243,18 @@ input.master-volume{
 }
 
 .noise-selector{
-    /* margin-top: -1400px; */
-    width: 300px;
-    /* margin-left: 50px; */
+    margin-top: 25px;
+    width: 250px;
+    margin-left: 50px;
 }
 .noise-volume{
     color: white;
     margin-top: 50px;
     font-weight: 700;
+}
+#noise-volume{
+        margin-top: 25px;
+
 }
 .colour{
     font-weight: 700;
