@@ -30,23 +30,23 @@
     </div>
     <br>
     <br>
-        <div class="stopAll" onclick="stopAllSoundsAndNoises()">
+        <div class="stop-all" onclick="stopAllSoundsAndNoises()">
                 STOP ALL SOUNDS & NOISES
         </div>
 
     <div class="noises">
         <br>
         <br>
-        <div class="colour">Select a Colour, or make waves:</div>
+        <!-- <div class="colour">Select a Colour, or make waves:</div> -->
         <br>
-        <label class="noiseVolume">noise volume <i class="fas fa-volume-up"></i>
+        <label class="noise-volume">noise volume <i class="fas fa-volume-up"></i>
             <input type="range" id="noise-volume" min="0" max="2" value="1" step="0.01">
         </label>
     
         <div class="selector">
             <select class="noise-selector" id="noise-selector" onchange="noiseSelect()">
                 <option selected onclick="noiseSelect()" value='none'>
-                    none
+                    Colours of Noise
                 </option>
                 <option onclick="noiseSelect()" value='brown'>
                     brown (soothing sound)
@@ -64,7 +64,7 @@
         </div>
     
         <br>
-        <button class="make-waves" onclick="makeWaves()">make waves</button>
+        <div class="make-waves" onclick="makeWaves()">make waves</div>
         </div>
     </div>
     <div class="middle-div">        
