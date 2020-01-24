@@ -3,8 +3,7 @@ body{
     /* text-align: center; */
     background-image: url("original.jpg");
     background-repeat: no-repeat;
-    background-size: 100vw 100%;
-    min-height: 100vh;
+    background-size: 100vw 100vh;
 }
 button{
     margin-top: 15px;
@@ -21,7 +20,7 @@ select{
     width: 80vw;
     margin: 15px auto;
     background: #555555;
-    min-height: 80vh;
+    min-height: 85vh;
 }
 
 .title-div{
@@ -272,13 +271,12 @@ input.volume{
     font-weight: 700;
 }
 
-.footer{
-    margin-top: 50px;
+footer{
+    margin-top: 100px;    
 }
 .fa-address-card{
       padding: 10px;
       font-size: 42px;
-      margin-top: 50px;
       color: black;
 }
 .fab{
