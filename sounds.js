@@ -69,7 +69,8 @@ let Sound = class {
         this.soundDiv.classList.remove("playing");
         this.soundPauseButton.classList.add("inactive");
         this.soundPlayButton.classList.remove("inactive");
-        this.soundSelector.value = './assets/sounds/nature.mp3';
+        this.soundSelector.value = 'nature';
+        this.soundAudio.src = this.sounds['nature'];
         setTimeout(function () { that.soundPlay() }, 3000)
     }
    

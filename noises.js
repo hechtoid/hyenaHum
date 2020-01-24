@@ -34,6 +34,7 @@ function noiseSelect() {
             break;
         case 'custom':
             oneSound.alertUpload();
+            this.noiseSelector.value = 'none';
             break;
     }
 }
