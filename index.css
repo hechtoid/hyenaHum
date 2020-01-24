@@ -105,9 +105,8 @@ input.volume{
     min-width: 100px;
     width: 100px;
     height: 100px;
-    font-weight: 900;
     padding: 10px;
-    padding-top: 15px;
+    /* padding-top: 15px; */
     margin-left: 50px;
     margin-top: 25px;
     opacity: 0.8;
@@ -119,6 +118,13 @@ input.volume{
     cursor: pointer;
     opacity: 1;
     transition: 0.2s;
+}
+.stop-sign{
+    margin: 10px auto;
+    font-weight: 900;
+    font-size: 27px;
+
+
 }
 
 .sound{
@@ -188,19 +194,25 @@ input.volume{
 }
 .play{
     /* margin-bottom: 10px; */
-    font-size: 64px;
     margin-left: 25px;
     width: 55px;
     /* position: relative; */
-    top: 0;
+    top: 15px;
     /* height: 42px; */
 }
+.fa-play{
+    font-size: 55px;
+
+}
 .pause{
-    font-size: 69px;
-    width: 45px;
+    width: 65px;
     margin-left: 10px;
-    position: relative;
-    top: -5px;
+    /* position: relative; */
+    top: 15px;
+    left: 10px;
+}
+.fa-pause{
+    font-size: 55px;
 }
 .inactive{
     display: none;
@@ -258,4 +270,25 @@ input.volume{
 }
 .colour{
     font-weight: 700;
+}
+
+.footer{
+    margin-top: 50px;
+}
+.fa-address-card{
+      padding: 10px;
+      font-size: 42px;
+      margin-top: 50px;
+      color: black;
+}
+.fab{
+      padding: 10px;
+      font-size: 42px;
+      color: black;
+}
+.fa-address-card:hover{
+   transform: scale(1.2)
+}
+.fab:hover{
+   transform: scale(1.2)
 }

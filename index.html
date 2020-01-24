@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="stop-all" onclick="stopAllSoundsAndNoises()">
-        STOP ALL SOUNDS & NOISES
+        <div class="stop-sign">FULL<br>STOP</div>
     </div>
     </div>
 
@@ -68,16 +68,27 @@
     
     
     </div>
+    <footer>
+        <a href="https://hechtoid.github.io/portfolio/" title="Portfolio" target="_blank">
+            <i class="fas fa-address-card"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/samuel-p-h/" title="Linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/hechtoid/" title="GitHub" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </footer>
     </div>
     <div class="right-div">        
         <div class="sounds">
             <div class="sound" id="one-div">
                 <div class="controls" onclick="oneSound.soundToggle()">
                     <div class="play control" id="one-play">
-                        ▶
+                    <i class="fas fa-play"></i>
                     </div>
                     <div class="pause control inactive" id="one-pause">
-                        ⏸
+                    <i class="fas fa-pause"></i>
                     </div>
                 </div>
                 <div class="sliders">
@@ -111,10 +122,10 @@
             <div class="sound" id="two-div">
                 <div class="controls" onclick="twoSound.soundToggle()">
                     <div class="play control" id="two-play">
-                        ▶
+                        <i class="fas fa-play"></i>
                     </div>
                     <div class="pause control inactive" id="two-pause">
-                        ⏸
+                        <i class="fas fa-pause"></i>
                     </div>
                 </div>
                 <div class="sliders">
@@ -145,10 +156,10 @@
             <div class="sound" id="three-div">
                 <div class="controls" onclick="threeSound.soundToggle()">
                     <div class="play control" id="three-play">
-                        ▶
+                        <i class="fas fa-play"></i>
                     </div>
                     <div class="pause control inactive" id="three-pause">
-                        ⏸
+                        <i class="fas fa-pause"></i>
                     </div>
                 </div>
                 <div class="sliders">
@@ -179,10 +190,10 @@
             <div class="sound" id="four-div">
                 <div class="controls" onclick="fourSound.soundToggle()">
                     <div class="play control" id="four-play">
-                        ▶
+                        <i class="fas fa-play"></i>
                     </div>
                     <div class="pause control inactive" id="four-pause">
-                        ⏸
+                        <i class="fas fa-pause"></i>
                     </div>
                 </div>
                 <div class="sliders">
@@ -214,6 +225,8 @@
 
 </div>
 </div>
+
+ 
 
 
 <audio loop id="one-audio" preload="metadata" src='./assets/sounds/nature.mp3'
