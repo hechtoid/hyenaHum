@@ -12,40 +12,56 @@ select{
     /* border-radius: 3px; */
 }
 
-.master{
+.master-transparent{
     display: flex;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 15px;
     padding: 25px;
     width: 80vw;
     margin: 15px auto;
     background: #555555;
+    opacity: 0.9;
     min-height: 85vh;
 }
-
+.master{
+    position:absolute; 
+    top:0px; 
+    right:0px; 
+    bottom:0px; 
+    left:0px;
+    display: flex;
+    padding: 25px;
+    width: 80vw;
+    margin: 15px auto;
+    min-height: 85vh;
+}
+.left-div{
+}
 .title-div{
     display: flex;
     justify-content: space-between;
-    margin-right: 50px;
-    margin-bottom: 25px;
+    margin-right: 50px; 
+  
 }
+.title-div h2{
+    color: black;
 
+}
 label.volume{
     position: relative;
     top: -10px;
-    color: white;
+    color: black;
     margin-left: 50px;
     margin-top: 25px;
     font-weight: 700;
     /* margin-bottom: 10px; */
 }
 label.master-volume{
-    color: white;
+    color: black;
     /* margin-left: 250px; */
-    /* margin-top: -25px; */
+    margin-top: 25px;
     /* margin-bottom: 10px; */
-    font-weight: 700;
-     
+    font-weight: 700;  
 }
 input.volume{
     width: 300px;
@@ -56,12 +72,14 @@ input.volume{
 .mix{
     font-weight: 700;
     display: inline-block;
+    color: white;
 }
 
 
 
 .make-waves{
-    margin-top: 25px;
+    /* margin-top: 15px; */
+    margin-bottom: 15px;
     background: #202070;
     
     color: white;
@@ -85,11 +103,18 @@ input.volume{
 }
 .sounds{
     display:inline-block;
-    margin-top: 15px;
+    margin-top: 50px;
+}
+.sounds .title{
+    font-weight: 900;
+    margin-left: 10px;
 }
 .noises{
     display:inline-block;
     margin-top: 40px;
+    border: 3px solid white;
+    padding: 25px;
+    border-radius: 5px;
 }
 .top-noises{
     display: flex;
@@ -105,13 +130,12 @@ input.volume{
     width: 100px;
     height: 100px;
     padding: 10px;
-    /* padding-top: 15px; */
-    margin-left: 50px;
-    margin-top: 25px;
     opacity: 0.8;
     transition: 0.2s;
     text-align: center;
-    display:inline-block;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
 }
 .stop-all:hover{
     cursor: pointer;
@@ -125,7 +149,10 @@ input.volume{
 
 
 }
-
+.right-title{
+    color: white;
+    font-weight: 900;
+}
 .sound{
     background: #702020;
     border: 5px solid white;
@@ -199,9 +226,11 @@ input.volume{
     top: 15px;
     /* height: 42px; */
 }
+.fas{
+    color: white;
+}
 .fa-play{
     font-size: 55px;
-
 }
 .pause{
     width: 65px;
@@ -254,21 +283,20 @@ input.volume{
 }
 
 .noise-selector{
-    margin-top: 25px;
+    /* margin-top: 25px; */
     width: 250px;
-    margin-left: 50px;
+    margin-right: 25px;
 }
 .noise-volume{
-    color: white;
-    margin-top: 50px;
+    color: black;    /* margin-top: 50px; */
     font-weight: 700;
 }
 #noise-volume{
-        margin-top: 25px;
 
 }
 .colour{
     font-weight: 700;
+    color: white;
 }
 
 footer{
