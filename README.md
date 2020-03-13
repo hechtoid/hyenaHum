@@ -31,8 +31,8 @@ I also learned a lot about the underlying wave science.
 
 ## WebAudioAPI
 
-* A complex aspect of the new web audio standard is the ability to link different audio "nodes" together to control noise inputs. It was difficult for me to handle multiple noise nodes all connecting to the same master node, 
-    * I solved this through a switch statement controlling every aspect of the connection and disconnection:
+* A complex aspect of the new web audio standard is the ability to link different audio "nodes" together to control noise inputs. It was difficult for me to handle multiple noise nodes all connecting to the same master node, and being a relatively new technology forum posts and error messages were not as helpful as they could be.
+    * I came up with my own solution, crafting a switch statement controlling every aspect of the connection and disconnection:
 
             function noiseSelect() {
                 switch (noiseSelector.value) {
