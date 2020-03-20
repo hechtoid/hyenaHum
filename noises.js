@@ -12,19 +12,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
     noiseSelector = document.getElementById('noise-selector')
 });
 
-function noiseSelect() {
+function noiseSelect(value=noiseSelector.value) {
 
-    switch (noiseSelector.value) {
+    switch (value) {
         case 'white':
             // volumeControl.value = 0.3
+            pinkNoise.disconnect()
+            brownNoise.disconnect()
+            whiteNoise.disconnect()
             whiteGain = context.createGain()
             whiteGain.gain.value = 0.3;
             whiteNoise.connect(whiteGain).connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
             break;
         case 'pink':
+            pinkNoise.disconnect()
+            brownNoise.disconnect()
+            whiteNoise.disconnect()
             pinkNoise.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
             break;
         case 'brown':
+            pinkNoise.disconnect()
+            brownNoise.disconnect()
+            whiteNoise.disconnect()
             brownNoise.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
             break;
         case 'none':
@@ -41,6 +50,9 @@ function noiseSelect() {
 
 
 function makeWaves() {
+    pinkNoise.disconnect()
+    brownNoise.disconnect()
+    whiteNoise.disconnect()
     // brownNoise = context.createBrownNoise();
     var brownGain = context.createGain();
     brownGain.gain.value = 0.9;

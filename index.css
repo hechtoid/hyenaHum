@@ -36,11 +36,13 @@ select{
     min-height: 85vh;
 }
 .left-div{
+    width: 100%;
 }
 .title-div{
     display: flex;
     justify-content: space-between;
     margin-right: 50px; 
+    width: 100%;
   
 }
 .title-div h2{
@@ -58,7 +60,7 @@ label.volume{
 }
 label.master-volume{
     color: black;
-    /* margin-left: 250px; */
+    margin-left: 25px;
     margin-top: 25px;
     /* margin-bottom: 10px; */
     font-weight: 700;  
@@ -120,15 +122,18 @@ input.volume{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 15px;
+
 }
 .stop-all{
+    margin: 25px;
     background: black;
     color: white;
-    border: 5px solid #702020;
+    /* border: 5px solid #702020; */
     border-radius: 10px;
     min-width: 100px;
-    width: 100px;
-    height: 100px;
+    width: 123px;
+    height: 123px;
     padding: 10px;
     opacity: 0.8;
     transition: 0.2s;
@@ -146,7 +151,14 @@ input.volume{
     margin: 10px auto;
     font-weight: 900;
     font-size: 27px;
-
+    background: red;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
 
 }
 .right-title{
@@ -286,6 +298,12 @@ input.volume{
     /* margin-top: 25px; */
     width: 250px;
     margin-right: 25px;
+
+}
+.selector label{
+    color: white;
+    font-weight: 700;
+
 }
 .noise-volume{
     color: black;    /* margin-top: 50px; */
@@ -296,9 +314,14 @@ input.volume{
 }
 .colour{
     font-weight: 700;
-    color: white;
+    color: black;
 }
-
+.master-controls{
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-between;
+}
 footer{
     margin-top: 100px;    
 }
