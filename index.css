@@ -34,6 +34,7 @@ select{
     width: 80vw;
     margin: 15px auto;
     min-height: 85vh;
+    overflow: hidden;
 }
 .left-div{
     width: 100%;
@@ -42,12 +43,12 @@ select{
     display: flex;
     justify-content: space-between;
     margin-right: 50px; 
-    width: 100%;
-  
+    width: 100%;  
+    margin-top: -15px;
 }
 .title-div h2{
     color: black;
-
+   
 }
 label.volume{
     position: relative;
@@ -317,10 +318,8 @@ input.volume{
     color: black;
 }
 .master-controls{
-    display: flex;
+    margin-top: 50px;
     width: 100%;
-    align-items: baseline;
-    justify-content: space-between;
 }
 footer{
     margin-top: 100px;    
