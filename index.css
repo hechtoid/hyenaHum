@@ -11,7 +11,9 @@ button{
 select{
     /* border-radius: 3px; */
 }
-
+*{
+    /* border: 1px solid red; */
+}
 .master-transparent{
     display: flex;
     border: 3px solid black;
@@ -35,14 +37,25 @@ select{
     margin: 15px auto;
     min-height: 85vh;
     overflow: hidden;
+    justify-content: stretch;
+
 }
-.left-div{
-    width: 100%;
+.right-div{
+    display: flex;
+    justify-content: center; 
+    width: 50%;
+
+}
+.left-big-div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
 }
 .title-div{
     display: flex;
     justify-content: space-between;
-    margin-right: 50px; 
+    /* margin-right: 50px;  */
     width: 100%;  
     margin-top: -15px;
 }
