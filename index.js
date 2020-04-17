@@ -18,4 +18,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
         masterGainNode.gain.value = this.value;
     }, false);
 });
-

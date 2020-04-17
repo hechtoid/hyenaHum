@@ -13,7 +13,7 @@ I also learned a lot about the underlying wave science.
 
 ![image image](scrot.png)
 
-## Architecture & Technology
+## Arch & Tech
 
 * Thanks to modern web technologies, I can provide most of this functionality through customization of the `<audio>` element. 
 * Still thinking in React but VanillaJS DOM manipulation methods are much more direct tools to update the ui.
