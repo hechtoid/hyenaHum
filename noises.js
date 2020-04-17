@@ -13,9 +13,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function noiseSelect(value=noiseSelector.value) {
-
+   
     switch (value) {
         case 'white':
+            context.resume().then(() => {
             // volumeControl.value = 0.3
             pinkNoise.disconnect()
             brownNoise.disconnect()
@@ -23,19 +24,24 @@ function noiseSelect(value=noiseSelector.value) {
             whiteGain = context.createGain()
             whiteGain.gain.value = 0.3;
             whiteNoise.connect(whiteGain).connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
+            })
             break;
         case 'pink':
+            context.resume().then(() => {
             pinkNoise.disconnect()
             brownNoise.disconnect()
             whiteNoise.disconnect()
             pinkNoise.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
-            break;
+        })
+        break;
         case 'brown':
+            context.resume().then(() => {
             pinkNoise.disconnect()
             brownNoise.disconnect()
             whiteNoise.disconnect()
             brownNoise.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
-            break;
+        })
+        break;
         case 'none':
             pinkNoise.disconnect()
             brownNoise.disconnect()
@@ -50,6 +56,7 @@ function noiseSelect(value=noiseSelector.value) {
 
 
 function makeWaves() {
+    context.resume().then(() => {
     pinkNoise.disconnect()
     brownNoise.disconnect()
     whiteNoise.disconnect()
@@ -67,4 +74,5 @@ function makeWaves() {
     lfo.connect(lfoGain);
     lfoGain.connect(brownGain.gain);
     brownGain.connect(noiseGainNode).connect(masterGainNode).connect(context.destination);
+})
 }

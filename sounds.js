@@ -33,11 +33,13 @@ let Sound = class {
     }
 
     soundToggle() {
+        
         if (this.soundAudio.paused && !this.soundAudio.src.includes('none')) {
-            this.soundAudio.play();
+            context.resume().then(() => {    this.soundAudio.play();
             this.soundDiv.classList.add("playing");
             this.soundPlayButton.classList.add("inactive");
             this.soundPauseButton.classList.remove("inactive");
+        })
         } else {
             this.soundAudio.pause();
             this.soundDiv.classList.remove("playing");
@@ -46,10 +48,12 @@ let Sound = class {
         }
     }
     soundPlay() {
+        context.resume().then(() => {
         this.soundAudio.play();
         this.soundDiv.classList.add("playing")
         this.soundPlayButton.classList.add("inactive");
         this.soundPauseButton.classList.remove("inactive");
+    })
     }
     soundStop() {
         this.soundAudio.pause();
@@ -75,12 +79,15 @@ let Sound = class {
     }
    
     soundSelect() {
+        context.resume().then(() => {
+        console.log(context.state)
         if (this.soundSelector.value === "none") {
             this.alertUpload();
         } else {
             this.soundAudio.src = this.sounds[this.soundSelector.value];
             this.soundPlay();
         }
+    })
     }
 
     //SEEKBAR 
